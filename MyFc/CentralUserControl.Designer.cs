@@ -55,6 +55,7 @@ namespace MyFc
             this.MatchSchedulebutton.Text = "MATCH SCHEDULE";
             this.MatchSchedulebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.MatchSchedulebutton.UseVisualStyleBackColor = false;
+            this.MatchSchedulebutton.Click += new System.EventHandler(this.MatchSchedulebutton_Click);
             // 
             // UpdateRatingbutton
             // 

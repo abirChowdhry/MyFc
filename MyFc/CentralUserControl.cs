@@ -16,5 +16,11 @@ namespace MyFc
         {
             InitializeComponent();
         }
+
+        private void MatchSchedulebutton_Click(object sender, EventArgs e)
+        {
+            MatchSchedule matchSchedule = new MatchSchedule();
+            matchSchedule.Show();
+        }
     }
 }
