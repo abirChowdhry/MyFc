@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MyFc
 {
-    public partial class MatchSchedule : Form
+    public partial class AddMatch : Form
     {
-        public MatchSchedule()
+        public AddMatch()
         {
             InitializeComponent();
-        }
-
-        private void Exitbutton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void Maximisebutton_Click(object sender, EventArgs e)
@@ -37,23 +32,26 @@ namespace MyFc
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void Exitbutton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Backbutton_Click(object sender, EventArgs e)
         {
+            MatchSchedule matchSchedule = new MatchSchedule();
+            matchSchedule.Show();
             this.Hide();
         }
 
-        private void AddMatchbutton_Click(object sender, EventArgs e)
+        private void MatchSchedule_Load(object sender, EventArgs e)
         {
-            AddMatch addMatch = new AddMatch();
-            addMatch.Show();
-            this.Hide();
+
         }
 
-        private void UpdateMatchbutton_Click(object sender, EventArgs e)
+        private void Addbutton_Click(object sender, EventArgs e)
         {
-            UpdateMatch updateMatch = new UpdateMatch();
-            updateMatch.Show();
-            this.Hide();
+
         }
     }
 }

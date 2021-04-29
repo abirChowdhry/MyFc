@@ -83,6 +83,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMatch.Designer.cs">
+      <DependentUpon>AddMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MatchSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     <Compile Include="TransferUserControl.Designer.cs">
       <DependentUpon>TransferUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMatch.Designer.cs">
+      <DependentUpon>UpdateMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateSquad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMatch.resx">
+      <DependentUpon>AddMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MatchSchedule.resx">
       <DependentUpon>MatchSchedule.cs</DependentUpon>
@@ -190,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransferUserControl.resx">
       <DependentUpon>TransferUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMatch.resx">
+      <DependentUpon>UpdateMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSquad.resx">
       <DependentUpon>UpdateSquad.cs</DependentUpon>

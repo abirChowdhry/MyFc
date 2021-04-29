@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyFc
 {
-    public partial class MatchSchedule : Form
+    public partial class UpdateMatch : Form
     {
-        public MatchSchedule()
+        public UpdateMatch()
         {
             InitializeComponent();
         }
@@ -39,20 +39,8 @@ namespace MyFc
 
         private void Backbutton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-        }
-
-        private void AddMatchbutton_Click(object sender, EventArgs e)
-        {
-            AddMatch addMatch = new AddMatch();
-            addMatch.Show();
-            this.Hide();
-        }
-
-        private void UpdateMatchbutton_Click(object sender, EventArgs e)
-        {
-            UpdateMatch updateMatch = new UpdateMatch();
-            updateMatch.Show();
+            MatchSchedule matchSchedule = new MatchSchedule();
+            matchSchedule.Show();
             this.Hide();
         }
     }
