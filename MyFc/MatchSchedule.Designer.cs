@@ -42,6 +42,8 @@ namespace MyFc
             this.Resultlabel = new System.Windows.Forms.Label();
             this.Location_label = new System.Windows.Forms.Label();
             this.LocationcomboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Maximisebutton
@@ -52,7 +54,7 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(714, 2);
+            this.Maximisebutton.Location = new System.Drawing.Point(769, 2);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(40, 40);
             this.Maximisebutton.TabIndex = 52;
@@ -68,7 +70,7 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(668, 2);
+            this.Minimisebutton.Location = new System.Drawing.Point(723, 2);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(40, 40);
             this.Minimisebutton.TabIndex = 53;
@@ -85,7 +87,7 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(760, 2);
+            this.Exitbutton.Location = new System.Drawing.Point(815, 2);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(40, 40);
             this.Exitbutton.TabIndex = 51;
@@ -107,7 +109,7 @@ namespace MyFc
             // Backbutton
             // 
             this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(628, 402);
+            this.Backbutton.Location = new System.Drawing.Point(683, 463);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(160, 36);
             this.Backbutton.TabIndex = 55;
@@ -118,19 +120,20 @@ namespace MyFc
             // Addbutton
             // 
             this.Addbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbutton.Location = new System.Drawing.Point(285, 344);
+            this.Addbutton.Location = new System.Drawing.Point(305, 378);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(215, 29);
             this.Addbutton.TabIndex = 56;
             this.Addbutton.Text = "ADD";
             this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
             // 
             // MatchDatalabel
             // 
             this.MatchDatalabel.AutoSize = true;
             this.MatchDatalabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MatchDatalabel.ForeColor = System.Drawing.Color.White;
-            this.MatchDatalabel.Location = new System.Drawing.Point(171, 147);
+            this.MatchDatalabel.Location = new System.Drawing.Point(37, 67);
             this.MatchDatalabel.Name = "MatchDatalabel";
             this.MatchDatalabel.Size = new System.Drawing.Size(114, 23);
             this.MatchDatalabel.TabIndex = 57;
@@ -140,7 +143,7 @@ namespace MyFc
             // 
             this.DateOfBirthdateTimePicker.Checked = false;
             this.DateOfBirthdateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthdateTimePicker.Location = new System.Drawing.Point(366, 147);
+            this.DateOfBirthdateTimePicker.Location = new System.Drawing.Point(232, 67);
             this.DateOfBirthdateTimePicker.Name = "DateOfBirthdateTimePicker";
             this.DateOfBirthdateTimePicker.Size = new System.Drawing.Size(342, 31);
             this.DateOfBirthdateTimePicker.TabIndex = 58;
@@ -154,7 +157,7 @@ namespace MyFc
             "Drow",
             "Win",
             "Lose"});
-            this.ResultcomboBox.Location = new System.Drawing.Point(366, 211);
+            this.ResultcomboBox.Location = new System.Drawing.Point(232, 131);
             this.ResultcomboBox.Name = "ResultcomboBox";
             this.ResultcomboBox.Size = new System.Drawing.Size(342, 30);
             this.ResultcomboBox.TabIndex = 59;
@@ -164,7 +167,7 @@ namespace MyFc
             this.Resultlabel.AutoSize = true;
             this.Resultlabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resultlabel.ForeColor = System.Drawing.Color.White;
-            this.Resultlabel.Location = new System.Drawing.Point(171, 211);
+            this.Resultlabel.Location = new System.Drawing.Point(37, 131);
             this.Resultlabel.Name = "Resultlabel";
             this.Resultlabel.Size = new System.Drawing.Size(63, 23);
             this.Resultlabel.TabIndex = 60;
@@ -175,11 +178,11 @@ namespace MyFc
             this.Location_label.AutoSize = true;
             this.Location_label.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Location_label.ForeColor = System.Drawing.Color.White;
-            this.Location_label.Location = new System.Drawing.Point(171, 272);
+            this.Location_label.Location = new System.Drawing.Point(37, 192);
             this.Location_label.Name = "Location_label";
-            this.Location_label.Size = new System.Drawing.Size(89, 23);
+            this.Location_label.Size = new System.Drawing.Size(74, 23);
             this.Location_label.TabIndex = 61;
-            this.Location_label.Text = "Location";
+            this.Location_label.Text = "Region";
             // 
             // LocationcomboBox1
             // 
@@ -193,33 +196,48 @@ namespace MyFc
             "Latine America",
             "Autralia",
             "Africa"});
-            this.LocationcomboBox1.Location = new System.Drawing.Point(366, 272);
+            this.LocationcomboBox1.Location = new System.Drawing.Point(232, 192);
             this.LocationcomboBox1.Name = "LocationcomboBox1";
             this.LocationcomboBox1.Size = new System.Drawing.Size(342, 30);
             this.LocationcomboBox1.TabIndex = 62;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.MatchDatalabel);
+            this.groupBox1.Controls.Add(this.LocationcomboBox1);
+            this.groupBox1.Controls.Add(this.Location_label);
+            this.groupBox1.Controls.Add(this.DateOfBirthdateTimePicker);
+            this.groupBox1.Controls.Add(this.Resultlabel);
+            this.groupBox1.Controls.Add(this.ResultcomboBox);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Location = new System.Drawing.Point(115, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(603, 271);
+            this.groupBox1.TabIndex = 63;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Schedule A  Match";
             // 
             // MatchSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.LocationcomboBox1);
-            this.Controls.Add(this.Location_label);
-            this.Controls.Add(this.Resultlabel);
-            this.Controls.Add(this.ResultcomboBox);
-            this.Controls.Add(this.DateOfBirthdateTimePicker);
-            this.Controls.Add(this.MatchDatalabel);
-            this.Controls.Add(this.Addbutton);
+            this.ClientSize = new System.Drawing.Size(855, 511);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Backbutton);
+            this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Maximisebutton);
             this.Controls.Add(this.Minimisebutton);
             this.Controls.Add(this.Exitbutton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MatchSchedule";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MatchSchedule";
             this.Load += new System.EventHandler(this.MatchSchedule_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +257,6 @@ namespace MyFc
         private System.Windows.Forms.Label Resultlabel;
         private System.Windows.Forms.Label Location_label;
         private System.Windows.Forms.ComboBox LocationcomboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

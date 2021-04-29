@@ -46,5 +46,10 @@ namespace MyFc
         {
 
         }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
