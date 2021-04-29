@@ -187,10 +187,12 @@ namespace MyFc
             this.LocationcomboBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LocationcomboBox1.FormattingEnabled = true;
             this.LocationcomboBox1.Items.AddRange(new object[] {
-            "Goalkeeper",
-            "Defender",
-            "Midfielder",
-            "Forward"});
+            "Asia",
+            "Europe",
+            "America",
+            "Latine America",
+            "Autralia",
+            "Africa"});
             this.LocationcomboBox1.Location = new System.Drawing.Point(366, 272);
             this.LocationcomboBox1.Name = "LocationcomboBox1";
             this.LocationcomboBox1.Size = new System.Drawing.Size(342, 30);
