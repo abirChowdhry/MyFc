@@ -43,6 +43,8 @@ namespace MyFc
             this.label4 = new System.Windows.Forms.Label();
             this.Createbutton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
+            this.UserTypecomboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,6 +148,8 @@ namespace MyFc
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.UserTypecomboBox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.SignupConfirmPasstextBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.SignupUsernametextBox);
@@ -156,7 +160,7 @@ namespace MyFc
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Location = new System.Drawing.Point(141, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 242);
+            this.groupBox1.Size = new System.Drawing.Size(495, 284);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Account";
@@ -183,7 +187,7 @@ namespace MyFc
             // Createbutton
             // 
             this.Createbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Createbutton.Location = new System.Drawing.Point(277, 353);
+            this.Createbutton.Location = new System.Drawing.Point(276, 386);
             this.Createbutton.Name = "Createbutton";
             this.Createbutton.Size = new System.Drawing.Size(215, 29);
             this.Createbutton.TabIndex = 21;
@@ -201,6 +205,30 @@ namespace MyFc
             this.Backbutton.Text = "Back";
             this.Backbutton.UseVisualStyleBackColor = true;
             this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
+            // UserTypecomboBox
+            // 
+            this.UserTypecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UserTypecomboBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserTypecomboBox.FormattingEnabled = true;
+            this.UserTypecomboBox.Items.AddRange(new object[] {
+            "Manager",
+            "Assistant Manager"});
+            this.UserTypecomboBox.Location = new System.Drawing.Point(213, 213);
+            this.UserTypecomboBox.Name = "UserTypecomboBox";
+            this.UserTypecomboBox.Size = new System.Drawing.Size(241, 30);
+            this.UserTypecomboBox.TabIndex = 43;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(34, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 23);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "User Type";
             // 
             // Signup
             // 
@@ -243,5 +271,7 @@ namespace MyFc
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Createbutton;
         private System.Windows.Forms.Button Backbutton;
+        private System.Windows.Forms.ComboBox UserTypecomboBox;
+        private System.Windows.Forms.Label label5;
     }
 }

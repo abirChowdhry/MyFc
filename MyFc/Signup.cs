@@ -31,12 +31,13 @@ namespace MyFc
             if (SignupUsernametextBox.Text == "") { MessageBox.Show("Usernamne Can't Be Empty!", "ERROR"); }
             else if (SignupPasstextBox.Text == "") { MessageBox.Show("Password Can't Be Empty!", "ERROR"); }
             else if (SignupConfirmPasstextBox.Text == "") { MessageBox.Show("Confirm Password Can't Be Empty!", "ERROR"); }
+            else if (UserTypecomboBox.Text == "") { MessageBox.Show("User Type Must Be Selected!", "ERROR"); }
             else if (SignupConfirmPasstextBox.Text != SignupPasstextBox.Text) { MessageBox.Show("Password & Confirm Password Can't Be Empty!", "ERROR"); }
             else  
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
                 connection.Open();
-                string sql = "Insert into users(username, password) values('" + SignupUsernametextBox.Text + "','" + SignupPasstextBox.Text + "') ";
+                string sql = "Insert into users(username, password,usertype) values('" + SignupUsernametextBox.Text + "','" + SignupPasstextBox.Text + "','"+UserTypecomboBox.Text+"') ";
                 SqlCommand command = new SqlCommand(sql, connection);
                 int flag = command.ExecuteNonQuery();
                 if (flag == 1)

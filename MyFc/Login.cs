@@ -67,9 +67,15 @@ namespace MyFc
 
                 if (reader.Read())
                 {
-                    MyFc myFc = new MyFc();
-                    myFc.Show();
-                    this.Hide();
+                    string usertype = reader["usertype"].ToString();
+
+                    if (usertype == "Manager")
+                    {
+                        MyFc myFc = new MyFc();
+                        myFc.Show();
+                        this.Hide();
+                    }
+                    
                 }
 
                 else
