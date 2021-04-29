@@ -41,5 +41,10 @@ namespace MyFc
         {
             this.Hide();
         }
+
+        private void MatchSchedule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
