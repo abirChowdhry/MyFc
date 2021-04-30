@@ -22,5 +22,11 @@ namespace MyFc
             MatchSchedule matchSchedule = new MatchSchedule();
             matchSchedule.Show();
         }
+
+        private void UpdateRatingbutton_Click(object sender, EventArgs e)
+        {
+            PlayerRating playerRating = new PlayerRating();
+            playerRating.Show();
+        }
     }
 }

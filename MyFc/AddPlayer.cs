@@ -93,16 +93,14 @@ namespace MyFc
                 if (flag == 1 && flag1 == 1)
                 {
                     connection.Close();
-                    MessageBox.Show("Player Added", "Successful");
+                    MessageBox.Show("Player Added", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                 }
                 else 
                 {
                     connection.Close();
-                    MessageBox.Show("Player Can't Be Added!", "Error");
+                    MessageBox.Show("Player Can't Be Added!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
         }
 

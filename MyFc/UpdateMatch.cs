@@ -43,5 +43,10 @@ namespace MyFc
             matchSchedule.Show();
             this.Hide();
         }
+
+        private void Updatebutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,6 +72,7 @@ namespace MyFc
             this.UpdateRatingbutton.Text = "PLAYER RATING";
             this.UpdateRatingbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.UpdateRatingbutton.UseVisualStyleBackColor = false;
+            this.UpdateRatingbutton.Click += new System.EventHandler(this.UpdateRatingbutton_Click);
             // 
             // label1
             // 

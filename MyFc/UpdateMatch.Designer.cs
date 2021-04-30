@@ -125,6 +125,7 @@ namespace MyFc
             this.Updatebutton.TabIndex = 51;
             this.Updatebutton.Text = "UPDATE";
             this.Updatebutton.UseVisualStyleBackColor = true;
+            this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
             // 
             // groupBox1
             // 

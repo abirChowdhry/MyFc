@@ -16,5 +16,11 @@ namespace MyFc
         {
             InitializeComponent();
         }
+
+        private void UpdateRatingbutton_Click(object sender, EventArgs e)
+        {
+            RatingUpdate ratingUpdate = new RatingUpdate();
+            ratingUpdate.Show();
+        }
     }
 }

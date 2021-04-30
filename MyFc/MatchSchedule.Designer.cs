@@ -109,7 +109,7 @@ namespace MyFc
             this.AddMatchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMatchbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddMatchbutton.ForeColor = System.Drawing.Color.White;
-            this.AddMatchbutton.Location = new System.Drawing.Point(154, 134);
+            this.AddMatchbutton.Location = new System.Drawing.Point(175, 134);
             this.AddMatchbutton.Name = "AddMatchbutton";
             this.AddMatchbutton.Size = new System.Drawing.Size(431, 78);
             this.AddMatchbutton.TabIndex = 33;
@@ -125,7 +125,7 @@ namespace MyFc
             this.UpdateMatchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateMatchbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateMatchbutton.ForeColor = System.Drawing.Color.White;
-            this.UpdateMatchbutton.Location = new System.Drawing.Point(154, 230);
+            this.UpdateMatchbutton.Location = new System.Drawing.Point(175, 230);
             this.UpdateMatchbutton.Name = "UpdateMatchbutton";
             this.UpdateMatchbutton.Size = new System.Drawing.Size(431, 78);
             this.UpdateMatchbutton.TabIndex = 34;

@@ -300,7 +300,7 @@ namespace MyFc
             // 
             this.Searchbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Searchbutton.Image = ((System.Drawing.Image)(resources.GetObject("Searchbutton.Image")));
-            this.Searchbutton.Location = new System.Drawing.Point(697, 88);
+            this.Searchbutton.Location = new System.Drawing.Point(738, 101);
             this.Searchbutton.Name = "Searchbutton";
             this.Searchbutton.Size = new System.Drawing.Size(110, 29);
             this.Searchbutton.TabIndex = 44;
@@ -312,7 +312,7 @@ namespace MyFc
             // PlayerIdtextBox
             // 
             this.PlayerIdtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerIdtextBox.Location = new System.Drawing.Point(423, 86);
+            this.PlayerIdtextBox.Location = new System.Drawing.Point(464, 99);
             this.PlayerIdtextBox.Name = "PlayerIdtextBox";
             this.PlayerIdtextBox.Size = new System.Drawing.Size(268, 31);
             this.PlayerIdtextBox.TabIndex = 43;
@@ -322,7 +322,7 @@ namespace MyFc
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(326, 88);
+            this.label2.Location = new System.Drawing.Point(367, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 42;
