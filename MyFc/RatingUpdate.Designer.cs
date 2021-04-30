@@ -36,6 +36,12 @@ namespace MyFc
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RatingUpdatedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.UpdateRatingtextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RatingtextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.PlayerNametextBox = new System.Windows.Forms.TextBox();
@@ -47,13 +53,9 @@ namespace MyFc
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.Backbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.RatingtextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RatingUploaddateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.Addbutton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPlayerpictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,7 +70,7 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(1315, 0);
+            this.Maximisebutton.Location = new System.Drawing.Point(1381, 0);
             this.Maximisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(47, 49);
@@ -85,7 +87,7 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(1261, 0);
+            this.Minimisebutton.Location = new System.Drawing.Point(1327, 0);
             this.Minimisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(47, 49);
@@ -103,7 +105,7 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(1368, 0);
+            this.Exitbutton.Location = new System.Drawing.Point(1434, 0);
             this.Exitbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(47, 49);
@@ -136,9 +138,11 @@ namespace MyFc
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.RatingUploaddateTimePicker);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.RatingUpdatedateTimePicker);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.UpdateRatingtextBox);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.RatingtextBox);
             this.groupBox2.Controls.Add(this.label3);
@@ -151,10 +155,71 @@ namespace MyFc
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox2.Location = new System.Drawing.Point(630, 196);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(772, 411);
+            this.groupBox2.Size = new System.Drawing.Size(838, 411);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player Details";
+            // 
+            // RatingUpdatedateTimePicker
+            // 
+            this.RatingUpdatedateTimePicker.Enabled = false;
+            this.RatingUpdatedateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RatingUpdatedateTimePicker.Location = new System.Drawing.Point(456, 302);
+            this.RatingUpdatedateTimePicker.Name = "RatingUpdatedateTimePicker";
+            this.RatingUpdatedateTimePicker.Size = new System.Drawing.Size(342, 31);
+            this.RatingUpdatedateTimePicker.TabIndex = 65;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(293, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 23);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Update Date";
+            // 
+            // UpdateRatingtextBox
+            // 
+            this.UpdateRatingtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateRatingtextBox.Location = new System.Drawing.Point(456, 198);
+            this.UpdateRatingtextBox.Name = "UpdateRatingtextBox";
+            this.UpdateRatingtextBox.Size = new System.Drawing.Size(342, 31);
+            this.UpdateRatingtextBox.TabIndex = 63;
+            this.UpdateRatingtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(293, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 23);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Today\'s Rating";
+            // 
+            // RatingtextBox
+            // 
+            this.RatingtextBox.Enabled = false;
+            this.RatingtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RatingtextBox.Location = new System.Drawing.Point(456, 136);
+            this.RatingtextBox.Name = "RatingtextBox";
+            this.RatingtextBox.ReadOnly = true;
+            this.RatingtextBox.Size = new System.Drawing.Size(342, 31);
+            this.RatingtextBox.TabIndex = 61;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(293, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Rating";
             // 
             // PlayerIdtextBox
             // 
@@ -181,7 +246,7 @@ namespace MyFc
             // 
             this.PlayerNametextBox.Enabled = false;
             this.PlayerNametextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerNametextBox.Location = new System.Drawing.Point(411, 80);
+            this.PlayerNametextBox.Location = new System.Drawing.Point(456, 75);
             this.PlayerNametextBox.Name = "PlayerNametextBox";
             this.PlayerNametextBox.ReadOnly = true;
             this.PlayerNametextBox.Size = new System.Drawing.Size(342, 31);
@@ -192,7 +257,7 @@ namespace MyFc
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(248, 82);
+            this.label9.Location = new System.Drawing.Point(293, 77);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 23);
             this.label9.TabIndex = 42;
@@ -279,66 +344,6 @@ namespace MyFc
             this.label2.TabIndex = 48;
             this.label2.Text = "Player Name";
             // 
-            // RatingtextBox
-            // 
-            this.RatingtextBox.Enabled = false;
-            this.RatingtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RatingtextBox.Location = new System.Drawing.Point(411, 141);
-            this.RatingtextBox.Name = "RatingtextBox";
-            this.RatingtextBox.ReadOnly = true;
-            this.RatingtextBox.Size = new System.Drawing.Size(342, 31);
-            this.RatingtextBox.TabIndex = 61;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(248, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Rating";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(411, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(342, 31);
-            this.textBox2.TabIndex = 63;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(248, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 23);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Today\'s Rating";
-            // 
-            // RatingUploaddateTimePicker
-            // 
-            this.RatingUploaddateTimePicker.Enabled = false;
-            this.RatingUploaddateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RatingUploaddateTimePicker.Location = new System.Drawing.Point(411, 268);
-            this.RatingUploaddateTimePicker.Name = "RatingUploaddateTimePicker";
-            this.RatingUploaddateTimePicker.Size = new System.Drawing.Size(342, 31);
-            this.RatingUploaddateTimePicker.TabIndex = 65;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(248, 273);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 23);
-            this.label5.TabIndex = 64;
-            this.label5.Text = "Update Date";
-            // 
             // Addbutton
             // 
             this.Addbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,13 +353,34 @@ namespace MyFc
             this.Addbutton.TabIndex = 81;
             this.Addbutton.Text = "UPDATE";
             this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(456, 251);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(342, 31);
+            this.dateTimePicker1.TabIndex = 67;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(293, 256);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 23);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "Last Updated";
             // 
             // RatingUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(1414, 727);
+            this.ClientSize = new System.Drawing.Size(1480, 727);
             this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Backbutton);
@@ -403,12 +429,14 @@ namespace MyFc
         private System.Windows.Forms.TextBox NametextBox;
         private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UpdateRatingtextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox RatingtextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker RatingUploaddateTimePicker;
+        private System.Windows.Forms.DateTimePicker RatingUpdatedateTimePicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Addbutton;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
     }
 }

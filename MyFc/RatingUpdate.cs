@@ -57,7 +57,7 @@ namespace MyFc
                 players1.Name = reader["name"].ToString();
                 players1.Image = (byte[])reader["photo"];
                 //players1.Rate = Convert.ToSingle(reader["rate"]);
-                players1.PreRate = Convert.ToSingle(reader["prerate"]);
+                players1.Rate = Convert.ToSingle(reader["prerate"]);
                 players1.UploadDate = reader["uploaddate"].ToString();
                 players1.LastModified = reader["updatedate"].ToString();
                 players1.Id = Convert.ToInt32(reader["playerId"]);
@@ -87,7 +87,7 @@ namespace MyFc
                 PlayerNametextBox.Text = SquaddataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
                 PlayerIdtextBox.Text = SquaddataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                 ShowPlayerpictureBox.Image = GetPhoto((byte[])SquaddataGridView.Rows[e.RowIndex].Cells[2].Value);
-                RatingtextBox.Text = SquaddataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                RatingtextBox.Text = SquaddataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
 
@@ -124,6 +124,39 @@ namespace MyFc
 
             SquaddataGridView.DataSource = players;
             connection.Close();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Only Numbers or Digits");
+            }
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+            if (UpdateRatingtextBox.Text == "") { MessageBox.Show("Today's Rating Must Be Enterted To Update Rating", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else
+            {
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
+
+
+                string sql = "Update ratings set prerate = @prerate, updatedate = @updatedate where playerid = '" + PlayerIdtextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                //command.Parameters.AddWithValue("rating", ((Convert.ToSingle(comboBox2.Text) + Convert.ToSingle(comboBox3.Text)) / 2));
+                command.Parameters.AddWithValue("prerate", ((Convert.ToSingle(RatingtextBox.Text) + Convert.ToSingle(UpdateRatingtextBox.Text)) / 2));
+                command.Parameters.AddWithValue("updatedate", RatingUpdatedateTimePicker.Text);
+
+                int flag = command.ExecuteNonQuery();
+                connection.Close();
+
+                if (flag == 1) MessageBox.Show("Rating Updated", "SUCCESSFUL");
+                else  MessageBox.Show("Rating Not Updated", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

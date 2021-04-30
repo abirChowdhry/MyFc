@@ -54,7 +54,7 @@ namespace MyFc
             SqlCommand command = new SqlCommand(sql, connection);
             SqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read()) { MessageBox.Show("Player is Already in the Rating List!! You Can Only Update His Rating","WARNING!",MessageBoxButtons.OK,MessageBoxIcon.Warning); connection.Close(); }
+            if (reader.Read()) { MessageBox.Show("Player is Already in the Rating List!! You Can Only Update His Rating","Info",MessageBoxButtons.OK,MessageBoxIcon.Information); connection.Close(); }
 
             else
             {
@@ -128,7 +128,7 @@ namespace MyFc
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Only Numbers or Digits","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Only Numbers or Digits","WARNING",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
     }
