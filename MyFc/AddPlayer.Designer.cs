@@ -158,6 +158,7 @@ namespace MyFc
             this.PricetextBox.Name = "PricetextBox";
             this.PricetextBox.Size = new System.Drawing.Size(211, 31);
             this.PricetextBox.TabIndex = 35;
+            this.PricetextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PricetextBox_KeyPress);
             // 
             // label7
             // 
@@ -177,6 +178,7 @@ namespace MyFc
             this.WagetextBox.Name = "WagetextBox";
             this.WagetextBox.Size = new System.Drawing.Size(211, 31);
             this.WagetextBox.TabIndex = 33;
+            this.WagetextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WagetextBox_KeyPress);
             // 
             // label6
             // 

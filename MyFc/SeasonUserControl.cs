@@ -22,5 +22,11 @@ namespace MyFc
             RatingUpdate ratingUpdate = new RatingUpdate();
             ratingUpdate.Show();
         }
+
+        private void TopRatedPlayerbutton_Click(object sender, EventArgs e)
+        {
+            TopRatedPlayer topRatedPlayer = new TopRatedPlayer();
+            topRatedPlayer.Show();
+        }
     }
 }

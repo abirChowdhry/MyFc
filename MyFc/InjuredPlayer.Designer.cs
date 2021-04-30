@@ -34,6 +34,8 @@ namespace MyFc
             this.Backbutton = new System.Windows.Forms.Button();
             this.Injuredbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EventcomboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.PositioncomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.NametextBox = new System.Windows.Forms.TextBox();
@@ -47,17 +49,15 @@ namespace MyFc
             this.Exitbutton = new System.Windows.Forms.Button();
             this.Recoveredbutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.HeighttextBox = new System.Windows.Forms.TextBox();
             this.CurrencycomboBox2 = new System.Windows.Forms.ComboBox();
+            this.HeighttextBox = new System.Windows.Forms.TextBox();
+            this.DateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CurrencycomboBox1 = new System.Windows.Forms.ComboBox();
             this.PricetextBox = new System.Windows.Forms.TextBox();
-            this.WagetextBox = new System.Windows.Forms.TextBox();
             this.PreferredFootcomboBox = new System.Windows.Forms.ComboBox();
+            this.WagetextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.SquaddataGridView = new System.Windows.Forms.DataGridView();
-            this.EventcomboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InjuryPlayerpictureBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -115,6 +115,30 @@ namespace MyFc
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Details";
+            // 
+            // EventcomboBox
+            // 
+            this.EventcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EventcomboBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventcomboBox.FormattingEnabled = true;
+            this.EventcomboBox.Items.AddRange(new object[] {
+            "Injury",
+            "Red Card"});
+            this.EventcomboBox.Location = new System.Drawing.Point(346, 200);
+            this.EventcomboBox.Name = "EventcomboBox";
+            this.EventcomboBox.Size = new System.Drawing.Size(342, 30);
+            this.EventcomboBox.TabIndex = 41;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(260, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 23);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Event";
             // 
             // PositioncomboBox
             // 
@@ -287,22 +311,6 @@ namespace MyFc
             this.groupBox2.Text = "Other Details";
             this.groupBox2.Visible = false;
             // 
-            // DateOfBirthdateTimePicker
-            // 
-            this.DateOfBirthdateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthdateTimePicker.Location = new System.Drawing.Point(6, 19);
-            this.DateOfBirthdateTimePicker.Name = "DateOfBirthdateTimePicker";
-            this.DateOfBirthdateTimePicker.Size = new System.Drawing.Size(71, 31);
-            this.DateOfBirthdateTimePicker.TabIndex = 31;
-            // 
-            // HeighttextBox
-            // 
-            this.HeighttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeighttextBox.Location = new System.Drawing.Point(83, 19);
-            this.HeighttextBox.Name = "HeighttextBox";
-            this.HeighttextBox.Size = new System.Drawing.Size(72, 31);
-            this.HeighttextBox.TabIndex = 30;
-            // 
             // CurrencycomboBox2
             // 
             this.CurrencycomboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -315,6 +323,22 @@ namespace MyFc
             this.CurrencycomboBox2.Name = "CurrencycomboBox2";
             this.CurrencycomboBox2.Size = new System.Drawing.Size(121, 30);
             this.CurrencycomboBox2.TabIndex = 42;
+            // 
+            // HeighttextBox
+            // 
+            this.HeighttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeighttextBox.Location = new System.Drawing.Point(83, 19);
+            this.HeighttextBox.Name = "HeighttextBox";
+            this.HeighttextBox.Size = new System.Drawing.Size(72, 31);
+            this.HeighttextBox.TabIndex = 30;
+            // 
+            // DateOfBirthdateTimePicker
+            // 
+            this.DateOfBirthdateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateOfBirthdateTimePicker.Location = new System.Drawing.Point(6, 19);
+            this.DateOfBirthdateTimePicker.Name = "DateOfBirthdateTimePicker";
+            this.DateOfBirthdateTimePicker.Size = new System.Drawing.Size(71, 31);
+            this.DateOfBirthdateTimePicker.TabIndex = 31;
             // 
             // CurrencycomboBox1
             // 
@@ -337,14 +361,6 @@ namespace MyFc
             this.PricetextBox.Size = new System.Drawing.Size(135, 31);
             this.PricetextBox.TabIndex = 40;
             // 
-            // WagetextBox
-            // 
-            this.WagetextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WagetextBox.Location = new System.Drawing.Point(275, 56);
-            this.WagetextBox.Name = "WagetextBox";
-            this.WagetextBox.Size = new System.Drawing.Size(121, 31);
-            this.WagetextBox.TabIndex = 39;
-            // 
             // PreferredFootcomboBox
             // 
             this.PreferredFootcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -357,6 +373,14 @@ namespace MyFc
             this.PreferredFootcomboBox.Name = "PreferredFootcomboBox";
             this.PreferredFootcomboBox.Size = new System.Drawing.Size(107, 30);
             this.PreferredFootcomboBox.TabIndex = 38;
+            // 
+            // WagetextBox
+            // 
+            this.WagetextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WagetextBox.Location = new System.Drawing.Point(275, 56);
+            this.WagetextBox.Name = "WagetextBox";
+            this.WagetextBox.Size = new System.Drawing.Size(121, 31);
+            this.WagetextBox.TabIndex = 39;
             // 
             // groupBox3
             // 
@@ -385,30 +409,6 @@ namespace MyFc
             this.SquaddataGridView.ReadOnly = true;
             this.SquaddataGridView.Size = new System.Drawing.Size(628, 276);
             this.SquaddataGridView.TabIndex = 0;
-            // 
-            // EventcomboBox
-            // 
-            this.EventcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.EventcomboBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventcomboBox.FormattingEnabled = true;
-            this.EventcomboBox.Items.AddRange(new object[] {
-            "Injury",
-            "Red Card"});
-            this.EventcomboBox.Location = new System.Drawing.Point(346, 200);
-            this.EventcomboBox.Name = "EventcomboBox";
-            this.EventcomboBox.Size = new System.Drawing.Size(342, 30);
-            this.EventcomboBox.TabIndex = 41;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(260, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 23);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Event";
             // 
             // InjuredPlayer
             // 

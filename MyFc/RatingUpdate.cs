@@ -131,7 +131,7 @@ namespace MyFc
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Only Numbers or Digits");
+                MessageBox.Show("Only Numbers or Digits", "WARNING",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 

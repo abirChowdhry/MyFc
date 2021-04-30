@@ -50,9 +50,10 @@ namespace MyFc
             this.TopRatedPlayerbutton.Name = "TopRatedPlayerbutton";
             this.TopRatedPlayerbutton.Size = new System.Drawing.Size(290, 345);
             this.TopRatedPlayerbutton.TabIndex = 2;
-            this.TopRatedPlayerbutton.Text = "TOP RATED PLAYER";
+            this.TopRatedPlayerbutton.Text = "TOP RATED PLAYERS";
             this.TopRatedPlayerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.TopRatedPlayerbutton.UseVisualStyleBackColor = false;
+            this.TopRatedPlayerbutton.Click += new System.EventHandler(this.TopRatedPlayerbutton_Click);
             // 
             // TopGoalScorerbutton
             // 

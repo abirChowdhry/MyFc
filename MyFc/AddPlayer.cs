@@ -112,5 +112,23 @@ namespace MyFc
             memoryStream.Close();
             return img;
         }
+
+        private void WagetextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Only Numbers or Digits", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void PricetextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Only Numbers or Digits", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

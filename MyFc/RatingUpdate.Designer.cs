@@ -325,7 +325,7 @@ namespace MyFc
             // Backbutton
             // 
             this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(1242, 679);
+            this.Backbutton.Location = new System.Drawing.Point(1308, 679);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(160, 36);
             this.Backbutton.TabIndex = 47;
