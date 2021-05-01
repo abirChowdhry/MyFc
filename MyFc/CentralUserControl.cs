@@ -28,5 +28,11 @@ namespace MyFc
             PlayerRating playerRating = new PlayerRating();
             playerRating.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Eleven eleven = new Eleven();
+            eleven.Show();
+        }
     }
 }

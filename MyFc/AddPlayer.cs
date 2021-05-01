@@ -93,7 +93,7 @@ namespace MyFc
                 if (flag == 1 && flag1 == 1)
                 {
                     connection.Close();
-                    MessageBox.Show("Player Added", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Player Added", "Successful");
                     this.Hide();
                 }
                 else 
@@ -130,5 +130,6 @@ namespace MyFc
                 MessageBox.Show("Only Numbers or Digits", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

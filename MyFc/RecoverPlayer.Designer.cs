@@ -1,7 +1,7 @@
 ﻿
 namespace MyFc
 {
-    partial class InjuredPlayer
+    partial class RecoverPlayer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +29,28 @@ namespace MyFc
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InjuredPlayer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoverPlayer));
             this.label1 = new System.Windows.Forms.Label();
-            this.Backbutton = new System.Windows.Forms.Button();
-            this.Injuredbutton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SquaddataGridView = new System.Windows.Forms.DataGridView();
+            this.Searchbutton = new System.Windows.Forms.Button();
+            this.NametextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.EventcomboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PositioncomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.NametextBox = new System.Windows.Forms.TextBox();
+            this.PlayerNametextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.InjuryPlayerpictureBox = new System.Windows.Forms.PictureBox();
-            this.Searchbutton = new System.Windows.Forms.Button();
-            this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.Maximisebutton = new System.Windows.Forms.Button();
             this.Minimisebutton = new System.Windows.Forms.Button();
             this.Exitbutton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Injuredbutton = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.CurrencycomboBox2 = new System.Windows.Forms.ComboBox();
             this.HeighttextBox = new System.Windows.Forms.TextBox();
             this.DateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -55,9 +58,14 @@ namespace MyFc
             this.PricetextBox = new System.Windows.Forms.TextBox();
             this.PreferredFootcomboBox = new System.Windows.Forms.ComboBox();
             this.WagetextBox = new System.Windows.Forms.TextBox();
+            this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.NewIDtextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InjuryPlayerpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SquaddataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InjuryPlayerpictureBox)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -65,60 +73,110 @@ namespace MyFc
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(1, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 32);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Move Player";
+            this.label1.Size = new System.Drawing.Size(212, 32);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Recover Player";
             // 
-            // Backbutton
+            // label10
             // 
-            this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(789, 565);
-            this.Backbutton.Name = "Backbutton";
-            this.Backbutton.Size = new System.Drawing.Size(160, 36);
-            this.Backbutton.TabIndex = 61;
-            this.Backbutton.Text = "Back";
-            this.Backbutton.UseVisualStyleBackColor = true;
-            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
-            // 
-            // Injuredbutton
-            // 
-            this.Injuredbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Injuredbutton.Location = new System.Drawing.Point(327, 492);
-            this.Injuredbutton.Name = "Injuredbutton";
-            this.Injuredbutton.Size = new System.Drawing.Size(215, 29);
-            this.Injuredbutton.TabIndex = 60;
-            this.Injuredbutton.Text = "MOVE ";
-            this.Injuredbutton.UseVisualStyleBackColor = true;
-            this.Injuredbutton.Click += new System.EventHandler(this.Injuredbutton_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label10.Location = new System.Drawing.Point(26, 607);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(397, 19);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Click On Any Player To See His Details and Recover";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.EventcomboBox);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.PositioncomboBox);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.NametextBox);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.InjuryPlayerpictureBox);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Controls.Add(this.SquaddataGridView);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Location = new System.Drawing.Point(63, 179);
+            this.groupBox1.Location = new System.Drawing.Point(24, 175);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(752, 307);
-            this.groupBox1.TabIndex = 59;
+            this.groupBox1.Size = new System.Drawing.Size(620, 411);
+            this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Player Details";
+            this.groupBox1.Text = "Exception Case Player List";
+            // 
+            // SquaddataGridView
+            // 
+            this.SquaddataGridView.AllowUserToAddRows = false;
+            this.SquaddataGridView.AllowUserToDeleteRows = false;
+            this.SquaddataGridView.AllowUserToResizeColumns = false;
+            this.SquaddataGridView.AllowUserToResizeRows = false;
+            this.SquaddataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SquaddataGridView.BackgroundColor = System.Drawing.Color.Indigo;
+            this.SquaddataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SquaddataGridView.GridColor = System.Drawing.Color.White;
+            this.SquaddataGridView.Location = new System.Drawing.Point(6, 25);
+            this.SquaddataGridView.Name = "SquaddataGridView";
+            this.SquaddataGridView.ReadOnly = true;
+            this.SquaddataGridView.Size = new System.Drawing.Size(608, 380);
+            this.SquaddataGridView.TabIndex = 0;
+            this.SquaddataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SquaddataGridView_CellClick);
+            // 
+            // Searchbutton
+            // 
+            this.Searchbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Searchbutton.Image = ((System.Drawing.Image)(resources.GetObject("Searchbutton.Image")));
+            this.Searchbutton.Location = new System.Drawing.Point(488, 119);
+            this.Searchbutton.Name = "Searchbutton";
+            this.Searchbutton.Size = new System.Drawing.Size(110, 29);
+            this.Searchbutton.TabIndex = 60;
+            this.Searchbutton.Text = "SEARCH";
+            this.Searchbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Searchbutton.UseVisualStyleBackColor = true;
+            this.Searchbutton.Click += new System.EventHandler(this.Searchbutton_Click);
+            // 
+            // NametextBox
+            // 
+            this.NametextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NametextBox.Location = new System.Drawing.Point(201, 117);
+            this.NametextBox.Name = "NametextBox";
+            this.NametextBox.Size = new System.Drawing.Size(281, 31);
+            this.NametextBox.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(65, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 23);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Player Name";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.PlayerIdtextBox);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.EventcomboBox);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.PositioncomboBox);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.PlayerNametextBox);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.InjuryPlayerpictureBox);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Location = new System.Drawing.Point(687, 211);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(752, 307);
+            this.groupBox2.TabIndex = 64;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Player Details";
             // 
             // EventcomboBox
             // 
             this.EventcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EventcomboBox.Enabled = false;
             this.EventcomboBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventcomboBox.FormattingEnabled = true;
-            this.EventcomboBox.Items.AddRange(new object[] {
-            "Injury",
-            "Red Card"});
             this.EventcomboBox.Location = new System.Drawing.Point(346, 200);
             this.EventcomboBox.Name = "EventcomboBox";
             this.EventcomboBox.Size = new System.Drawing.Size(342, 30);
@@ -162,15 +220,15 @@ namespace MyFc
             this.label8.TabIndex = 38;
             this.label8.Text = "Position";
             // 
-            // NametextBox
+            // PlayerNametextBox
             // 
-            this.NametextBox.Enabled = false;
-            this.NametextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NametextBox.Location = new System.Drawing.Point(346, 75);
-            this.NametextBox.Name = "NametextBox";
-            this.NametextBox.ReadOnly = true;
-            this.NametextBox.Size = new System.Drawing.Size(342, 31);
-            this.NametextBox.TabIndex = 24;
+            this.PlayerNametextBox.Enabled = false;
+            this.PlayerNametextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerNametextBox.Location = new System.Drawing.Point(346, 75);
+            this.PlayerNametextBox.Name = "PlayerNametextBox";
+            this.PlayerNametextBox.ReadOnly = true;
+            this.PlayerNametextBox.Size = new System.Drawing.Size(342, 31);
+            this.PlayerNametextBox.TabIndex = 24;
             // 
             // label9
             // 
@@ -193,37 +251,16 @@ namespace MyFc
             this.InjuryPlayerpictureBox.TabIndex = 0;
             this.InjuryPlayerpictureBox.TabStop = false;
             // 
-            // Searchbutton
+            // Backbutton
             // 
-            this.Searchbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Searchbutton.Image = ((System.Drawing.Image)(resources.GetObject("Searchbutton.Image")));
-            this.Searchbutton.Location = new System.Drawing.Point(568, 131);
-            this.Searchbutton.Name = "Searchbutton";
-            this.Searchbutton.Size = new System.Drawing.Size(110, 29);
-            this.Searchbutton.TabIndex = 58;
-            this.Searchbutton.Text = "SEARCH";
-            this.Searchbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Searchbutton.UseVisualStyleBackColor = true;
-            this.Searchbutton.Click += new System.EventHandler(this.Searchbutton_Click);
-            // 
-            // PlayerIdtextBox
-            // 
-            this.PlayerIdtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerIdtextBox.Location = new System.Drawing.Point(294, 129);
-            this.PlayerIdtextBox.Name = "PlayerIdtextBox";
-            this.PlayerIdtextBox.Size = new System.Drawing.Size(268, 31);
-            this.PlayerIdtextBox.TabIndex = 57;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(197, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 23);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Player ID";
+            this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.Location = new System.Drawing.Point(1303, 607);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(160, 36);
+            this.Backbutton.TabIndex = 65;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
             // Maximisebutton
             // 
@@ -233,11 +270,11 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(861, 0);
+            this.Maximisebutton.Location = new System.Drawing.Point(1375, 0);
             this.Maximisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(47, 49);
-            this.Maximisebutton.TabIndex = 63;
+            this.Maximisebutton.TabIndex = 69;
             this.Maximisebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Maximisebutton.UseVisualStyleBackColor = true;
             this.Maximisebutton.Click += new System.EventHandler(this.Maximisebutton_Click);
@@ -250,11 +287,11 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(807, 0);
+            this.Minimisebutton.Location = new System.Drawing.Point(1321, 0);
             this.Minimisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(47, 49);
-            this.Minimisebutton.TabIndex = 64;
+            this.Minimisebutton.TabIndex = 70;
             this.Minimisebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Minimisebutton.UseVisualStyleBackColor = true;
             this.Minimisebutton.Click += new System.EventHandler(this.Minimisebutton_Click);
@@ -268,32 +305,44 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(914, 0);
+            this.Exitbutton.Location = new System.Drawing.Point(1428, 0);
             this.Exitbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(47, 49);
-            this.Exitbutton.TabIndex = 62;
+            this.Exitbutton.TabIndex = 68;
             this.Exitbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exitbutton.UseVisualStyleBackColor = true;
             this.Exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
             // 
-            // groupBox2
+            // Injuredbutton
             // 
-            this.groupBox2.Controls.Add(this.CurrencycomboBox2);
-            this.groupBox2.Controls.Add(this.HeighttextBox);
-            this.groupBox2.Controls.Add(this.DateOfBirthdateTimePicker);
-            this.groupBox2.Controls.Add(this.CurrencycomboBox1);
-            this.groupBox2.Controls.Add(this.PricetextBox);
-            this.groupBox2.Controls.Add(this.PreferredFootcomboBox);
-            this.groupBox2.Controls.Add(this.WagetextBox);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Location = new System.Drawing.Point(12, 492);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(117, 103);
-            this.groupBox2.TabIndex = 66;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Other Details";
-            this.groupBox2.Visible = false;
+            this.Injuredbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Injuredbutton.Location = new System.Drawing.Point(951, 524);
+            this.Injuredbutton.Name = "Injuredbutton";
+            this.Injuredbutton.Size = new System.Drawing.Size(215, 29);
+            this.Injuredbutton.TabIndex = 71;
+            this.Injuredbutton.Text = "RECOVERED";
+            this.Injuredbutton.UseVisualStyleBackColor = true;
+            this.Injuredbutton.Click += new System.EventHandler(this.Injuredbutton_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.NewIDtextBox);
+            this.groupBox3.Controls.Add(this.CurrencycomboBox2);
+            this.groupBox3.Controls.Add(this.HeighttextBox);
+            this.groupBox3.Controls.Add(this.DateOfBirthdateTimePicker);
+            this.groupBox3.Controls.Add(this.CurrencycomboBox1);
+            this.groupBox3.Controls.Add(this.PricetextBox);
+            this.groupBox3.Controls.Add(this.PreferredFootcomboBox);
+            this.groupBox3.Controls.Add(this.WagetextBox);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Location = new System.Drawing.Point(804, 83);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(503, 103);
+            this.groupBox3.TabIndex = 72;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Other Details";
+            this.groupBox3.Visible = false;
             // 
             // CurrencycomboBox2
             // 
@@ -366,31 +415,65 @@ namespace MyFc
             this.WagetextBox.Size = new System.Drawing.Size(121, 31);
             this.WagetextBox.TabIndex = 39;
             // 
-            // InjuredPlayer
+            // PlayerIdtextBox
+            // 
+            this.PlayerIdtextBox.Enabled = false;
+            this.PlayerIdtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerIdtextBox.Location = new System.Drawing.Point(123, 255);
+            this.PlayerIdtextBox.Name = "PlayerIdtextBox";
+            this.PlayerIdtextBox.Size = new System.Drawing.Size(160, 31);
+            this.PlayerIdtextBox.TabIndex = 59;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 23);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Player ID";
+            // 
+            // NewIDtextBox
+            // 
+            this.NewIDtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewIDtextBox.Location = new System.Drawing.Point(402, 56);
+            this.NewIDtextBox.Name = "NewIDtextBox";
+            this.NewIDtextBox.Size = new System.Drawing.Size(87, 31);
+            this.NewIDtextBox.TabIndex = 73;
+            // 
+            // RecoverPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(961, 613);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1475, 656);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.Injuredbutton);
             this.Controls.Add(this.Maximisebutton);
             this.Controls.Add(this.Minimisebutton);
             this.Controls.Add(this.Exitbutton);
             this.Controls.Add(this.Backbutton);
-            this.Controls.Add(this.Injuredbutton);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Searchbutton);
-            this.Controls.Add(this.PlayerIdtextBox);
+            this.Controls.Add(this.NametextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InjuredPlayer";
+            this.Name = "RecoverPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "RecoverPlayer";
+            this.Load += new System.EventHandler(this.RecoverPlayer_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InjuryPlayerpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SquaddataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InjuryPlayerpictureBox)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,29 +482,35 @@ namespace MyFc
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Backbutton;
-        private System.Windows.Forms.Button Injuredbutton;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView SquaddataGridView;
+        private System.Windows.Forms.Button Searchbutton;
+        private System.Windows.Forms.TextBox NametextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox EventcomboBox;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox PositioncomboBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox NametextBox;
+        private System.Windows.Forms.TextBox PlayerNametextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox InjuryPlayerpictureBox;
-        private System.Windows.Forms.Button Searchbutton;
-        private System.Windows.Forms.TextBox PlayerIdtextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.Button Maximisebutton;
         private System.Windows.Forms.Button Minimisebutton;
         private System.Windows.Forms.Button Exitbutton;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button Injuredbutton;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox CurrencycomboBox2;
         private System.Windows.Forms.TextBox HeighttextBox;
         private System.Windows.Forms.DateTimePicker DateOfBirthdateTimePicker;
-        private System.Windows.Forms.ComboBox CurrencycomboBox2;
         private System.Windows.Forms.ComboBox CurrencycomboBox1;
         private System.Windows.Forms.TextBox PricetextBox;
         private System.Windows.Forms.ComboBox PreferredFootcomboBox;
         private System.Windows.Forms.TextBox WagetextBox;
-        private System.Windows.Forms.ComboBox EventcomboBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox PlayerIdtextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox NewIDtextBox;
     }
 }

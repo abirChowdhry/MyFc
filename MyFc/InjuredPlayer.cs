@@ -22,6 +22,8 @@ namespace MyFc
 
         private void Backbutton_Click(object sender, EventArgs e)
         {
+            ExceptionCase exceptionCase = new ExceptionCase();
+            exceptionCase.Show();
             this.Hide();
         }
 
@@ -50,32 +52,44 @@ namespace MyFc
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
             connection.Open();
 
-            string sql = "Select * from PLAYERS where playerId = '" + PlayerIdtextBox.Text + "'";
+            string sql = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
             SqlCommand command = new SqlCommand(sql, connection);
             SqlDataReader reader = command.ExecuteReader();
 
-            if (reader.Read())
-            {
-                NametextBox.Text = reader["name"].ToString();
-                DateOfBirthdateTimePicker.Text = reader["dateOfBirth"].ToString();
-                InjuryPlayerpictureBox.Image = GetPhoto((byte[])reader["photo"]);
-                HeighttextBox.Text = reader["height"].ToString();
-                PreferredFootcomboBox.Text = reader["foot"].ToString();
-                WagetextBox.Text = reader["wage"].ToString();
-                CurrencycomboBox1.Text = reader["wageCurrency"].ToString();
-                PricetextBox.Text = reader["price"].ToString();
-                CurrencycomboBox2.Text = reader["priceCurrency"].ToString();
-                PositioncomboBox.Text = reader["position"].ToString();
-
-            }
+            if (!reader.Read()) { MessageBox.Show("Player is Already Under Exception Player List!! You Can Only Recover Him", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information); connection.Close(); }
 
             else
             {
-                NametextBox.Text = PositioncomboBox.Text = "";
-                MessageBox.Show("Player Not Found!", "ERROR");
-            }
+                SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection1.Open();
 
-            connection.Close();
+                string sql1 = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
+                SqlCommand command1 = new SqlCommand(sql1, connection1);
+                SqlDataReader reader1 = command1.ExecuteReader();
+
+                if (reader1.Read())
+                {
+                    NametextBox.Text = reader1["name"].ToString();
+                    DateOfBirthdateTimePicker.Text = reader1["dateOfBirth"].ToString();
+                    InjuryPlayerpictureBox.Image = GetPhoto((byte[])reader1["photo"]);
+                    HeighttextBox.Text = reader1["height"].ToString();
+                    PreferredFootcomboBox.Text = reader1["foot"].ToString();
+                    WagetextBox.Text = reader1["wage"].ToString();
+                    CurrencycomboBox1.Text = reader1["wageCurrency"].ToString();
+                    PricetextBox.Text = reader1["price"].ToString();
+                    CurrencycomboBox2.Text = reader1["priceCurrency"].ToString();
+                    PositioncomboBox.Text = reader1["position"].ToString();
+
+                }
+
+                else
+                {
+                    NametextBox.Text = PositioncomboBox.Text = "";
+                    MessageBox.Show("Player Not Found!", "ERROR");
+                }
+
+                connection1.Close();
+            }
         }
 
         private Image GetPhoto(byte[] value)
@@ -86,14 +100,16 @@ namespace MyFc
 
         private void Injuredbutton_Click(object sender, EventArgs e)
         {
-            if (EventcomboBox.Text == "") { MessageBox.Show("Event Must Be Selected", "ERROR"); }
+            if (NametextBox.Text == "") { MessageBox.Show("Player Name Can't Be Empty", "ERROR"); }
+            else if (PositioncomboBox.Text == "") { MessageBox.Show("Player Position Can't Be Empty", "ERROR"); }
+            else if (EventcomboBox.Text == "") { MessageBox.Show("Event Must Be Selected", "ERROR"); }
 
             else
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
                 connection.Open();
 
-                string sql = "Insert into Injuries(name,dateofBirth,photo,height,foot,wage,wageCurrency,price,priceCurrency,position,playerId,event) values('" + NametextBox.Text + "','" + DateOfBirthdateTimePicker.Text + "',@photo,'" + HeighttextBox.Text + "','" + PreferredFootcomboBox.Text + "','" + WagetextBox.Text + "','" + CurrencycomboBox1.Text + "','" + PricetextBox.Text + "','" + CurrencycomboBox2.Text + "','" + PositioncomboBox.Text + "','" + PlayerIdtextBox.Text + "','"+EventcomboBox.Text+"') ";
+                string sql = "Insert into Injuries(name,dateofBirth,photo,height,foot,wage,wageCurrency,price,priceCurrency,position,playerId,event) values('" + NametextBox.Text + "','" + DateOfBirthdateTimePicker.Text + "',@photo,'" + HeighttextBox.Text + "','" + PreferredFootcomboBox.Text + "','" + WagetextBox.Text + "','" + CurrencycomboBox1.Text + "','" + PricetextBox.Text + "','" + CurrencycomboBox2.Text + "','" + PositioncomboBox.Text + "','" + PlayerIdtextBox.Text + "','" + EventcomboBox.Text + "') ";
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.Parameters.AddWithValue("photo", ConvertImageToByte(InjuryPlayerpictureBox.Image));
 
@@ -110,39 +126,17 @@ namespace MyFc
 
                 if (flag == 0 && flag1 == 0)
                 {
-                    MessageBox.Show("Player Not Added To Injured List!", "ERROR");
+                    MessageBox.Show("Player Not Added To The Exception Case List!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Player Added To Injured List", "SUCCESSFUL");
+                    MessageBox.Show("Player Added To The Exception Case List", "SUCCESSFUL");
+                    ExceptionCase exceptionCase = new ExceptionCase();
+                    exceptionCase.Show();
+                    this.Hide();
                 }
 
                 connection2.Close();
-
-                SqlConnection connection3 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-                connection3.Open();
-
-                string sql3 = "SELECT * FROM injuries";
-                SqlCommand command3 = new SqlCommand(sql3, connection3);
-                SqlDataReader reader = command3.ExecuteReader();
-
-                List<Injured> injury = new List<Injured>();
-
-                while (reader.Read())
-                {
-                    Injured injury1 = new Injured();
-
-                    injury1.Name = reader["name"].ToString();
-                    injury1.Image = (byte[])reader["photo"];
-                    injury1.Position = reader["position"].ToString();
-                    injury1.Id = Convert.ToInt32(reader["playerId"]);
-                    injury1.Event = reader["event"].ToString();
-
-                    injury.Add(injury1);
-                }
-
-                SquaddataGridView.DataSource = injury;
-                connection.Close();
             }
         }
 
@@ -154,38 +148,6 @@ namespace MyFc
             memoryStream.Close();
             return img;
         }
-
-        private void Recoveredbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InjuredPlayer_Load(object sender, EventArgs e)
-        {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-
-            string sql = "SELECT * FROM injuries";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            List<Injured> injury = new List<Injured>();
-
-            while (reader.Read())
-            {
-                Injured injury1 = new Injured();
-
-                injury1.Name = reader["name"].ToString();
-                injury1.Image = (byte[])reader["photo"];
-                injury1.Position = reader["position"].ToString();
-                injury1.Id = Convert.ToInt32(reader["playerId"]);
-                injury1.Event = reader["event"].ToString();
-
-                injury.Add(injury1);
-            }
-
-            SquaddataGridView.DataSource = injury;
-            connection.Close();
-        }
     }
 }
+

@@ -104,7 +104,7 @@ namespace MyFc
                 if (flag == 1)
                 {
                     connection.Close();
-                    MessageBox.Show("Rating Uploaded", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Rating Uploaded", "Successful");
                     this.Hide();
                 }
                 else

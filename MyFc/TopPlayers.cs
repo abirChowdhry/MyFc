@@ -11,7 +11,5 @@ namespace MyFc
         public string Name { get; set; }
         public int Id { get; set; }
         public float Rate { get; set; }
-
-
     }
 }

@@ -37,8 +37,8 @@ namespace MyFc
 
         private void Injurybutton_Click(object sender, EventArgs e)
         {
-            InjuredPlayer injuredPlayer = new InjuredPlayer();
-            injuredPlayer.Show();
+            ExceptionCase exceptionCase = new ExceptionCase();
+            exceptionCase.Show();
         }
 
         private void ActiveSquadbutton_Click(object sender, EventArgs e)

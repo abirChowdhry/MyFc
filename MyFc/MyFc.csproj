@@ -64,6 +64,18 @@
     <Compile Include="CentralUserControl.Designer.cs">
       <DependentUpon>CentralUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Eleven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eleven.Designer.cs">
+      <DependentUpon>Eleven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionCase.Designer.cs">
+      <DependentUpon>ExceptionCase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </Compile>
     <Compile Include="RatingUpdate.Designer.cs">
       <DependentUpon>RatingUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecoverPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecoverPlayer.Designer.cs">
+      <DependentUpon>RecoverPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="RemovePlayer.cs">
       <SubType>Form</SubType>
@@ -181,6 +199,12 @@
     <EmbeddedResource Include="CentralUserControl.resx">
       <DependentUpon>CentralUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Eleven.resx">
+      <DependentUpon>Eleven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionCase.resx">
+      <DependentUpon>ExceptionCase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="RatingUpdate.resx">
       <DependentUpon>RatingUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecoverPlayer.resx">
+      <DependentUpon>RecoverPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemovePlayer.resx">
       <DependentUpon>RemovePlayer.cs</DependentUpon>

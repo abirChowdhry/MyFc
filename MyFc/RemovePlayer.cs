@@ -69,12 +69,16 @@ namespace MyFc
             SqlCommand command1 = new SqlCommand(sql1, connection1);
             int flag1 = command1.ExecuteNonQuery();
 
+            connection1.Close();
+
             SqlConnection connection2 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
             connection2.Open();
 
             string sql2 = "delete from injuries where playerId = '" + PlayerIdtextBox.Text + "'";
             SqlCommand command2 = new SqlCommand(sql2, connection2);
             int flag2 = command2.ExecuteNonQuery();
+
+            connection2.Close();
 
             SqlConnection connection3 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
             connection3.Open();
@@ -83,18 +87,17 @@ namespace MyFc
             SqlCommand command3 = new SqlCommand(sql3, connection3);
             int flag3 = command3.ExecuteNonQuery();
 
-            connection.Close();
+            connection3.Close();
 
             if (flag == 0 && flag1 == 0 && flag2 == 0 && flag3 == 0)
             {
                 MessageBox.Show("Player Not Removed!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                connection1.Close();
+                
             }
             else
             {
                 MessageBox.Show("Player Removed", "SUCCESSFUL", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                connection1.Close();
             }
         }
 
