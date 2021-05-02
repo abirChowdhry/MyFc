@@ -70,6 +70,7 @@ namespace MyFc
             this.TopGoalScorerbutton.Text = "TOP GOAL SCORER";
             this.TopGoalScorerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.TopGoalScorerbutton.UseVisualStyleBackColor = false;
+            this.TopGoalScorerbutton.Click += new System.EventHandler(this.TopGoalScorerbutton_Click);
             // 
             // TopAssistbutton
             // 
@@ -86,6 +87,7 @@ namespace MyFc
             this.TopAssistbutton.Text = "TOP ASSISTS";
             this.TopAssistbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.TopAssistbutton.UseVisualStyleBackColor = false;
+            this.TopAssistbutton.Click += new System.EventHandler(this.TopAssistbutton_Click);
             // 
             // UpdateRatingbutton
             // 

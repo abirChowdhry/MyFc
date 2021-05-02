@@ -37,14 +37,14 @@ namespace MyFc
             this.Backbutton = new System.Windows.Forms.Button();
             this.Addbutton = new System.Windows.Forms.Button();
             this.MatchDatalabel = new System.Windows.Forms.Label();
-            this.DateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.AddMatchdateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Resultlabel = new System.Windows.Forms.Label();
             this.Location_label = new System.Windows.Forms.Label();
             this.RegioncomboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TournamenttextBox = new System.Windows.Forms.TextBox();
             this.OpponenttextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.TournamenttextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,18 +137,18 @@ namespace MyFc
             this.MatchDatalabel.ForeColor = System.Drawing.Color.White;
             this.MatchDatalabel.Location = new System.Drawing.Point(37, 67);
             this.MatchDatalabel.Name = "MatchDatalabel";
-            this.MatchDatalabel.Size = new System.Drawing.Size(114, 23);
+            this.MatchDatalabel.Size = new System.Drawing.Size(118, 23);
             this.MatchDatalabel.TabIndex = 57;
-            this.MatchDatalabel.Text = "MatchData";
+            this.MatchDatalabel.Text = "Match Date";
             // 
-            // DateOfBirthdateTimePicker
+            // AddMatchdateTimePicker2
             // 
-            this.DateOfBirthdateTimePicker.Checked = false;
-            this.DateOfBirthdateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthdateTimePicker.Location = new System.Drawing.Point(232, 67);
-            this.DateOfBirthdateTimePicker.Name = "DateOfBirthdateTimePicker";
-            this.DateOfBirthdateTimePicker.Size = new System.Drawing.Size(342, 31);
-            this.DateOfBirthdateTimePicker.TabIndex = 58;
+            this.AddMatchdateTimePicker2.Checked = false;
+            this.AddMatchdateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMatchdateTimePicker2.Location = new System.Drawing.Point(232, 67);
+            this.AddMatchdateTimePicker2.Name = "AddMatchdateTimePicker2";
+            this.AddMatchdateTimePicker2.Size = new System.Drawing.Size(342, 31);
+            this.AddMatchdateTimePicker2.TabIndex = 58;
             // 
             // Resultlabel
             // 
@@ -197,7 +197,7 @@ namespace MyFc
             this.groupBox1.Controls.Add(this.MatchDatalabel);
             this.groupBox1.Controls.Add(this.RegioncomboBox1);
             this.groupBox1.Controls.Add(this.Location_label);
-            this.groupBox1.Controls.Add(this.DateOfBirthdateTimePicker);
+            this.groupBox1.Controls.Add(this.AddMatchdateTimePicker2);
             this.groupBox1.Controls.Add(this.Resultlabel);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -207,14 +207,6 @@ namespace MyFc
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Schedule A Match";
-            // 
-            // TournamenttextBox
-            // 
-            this.TournamenttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TournamenttextBox.Location = new System.Drawing.Point(232, 176);
-            this.TournamenttextBox.Name = "TournamenttextBox";
-            this.TournamenttextBox.Size = new System.Drawing.Size(342, 31);
-            this.TournamenttextBox.TabIndex = 63;
             // 
             // OpponenttextBox
             // 
@@ -235,6 +227,14 @@ namespace MyFc
             this.label2.TabIndex = 64;
             this.label2.Text = "Opponent";
             // 
+            // TournamenttextBox
+            // 
+            this.TournamenttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TournamenttextBox.Location = new System.Drawing.Point(232, 176);
+            this.TournamenttextBox.Name = "TournamenttextBox";
+            this.TournamenttextBox.Size = new System.Drawing.Size(342, 31);
+            this.TournamenttextBox.TabIndex = 63;
+            // 
             // AddMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +252,6 @@ namespace MyFc
             this.Name = "AddMatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MatchSchedule";
-            this.Load += new System.EventHandler(this.MatchSchedule_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -269,7 +268,7 @@ namespace MyFc
         private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.Button Addbutton;
         private System.Windows.Forms.Label MatchDatalabel;
-        private System.Windows.Forms.DateTimePicker DateOfBirthdateTimePicker;
+        private System.Windows.Forms.DateTimePicker AddMatchdateTimePicker2;
         private System.Windows.Forms.Label Resultlabel;
         private System.Windows.Forms.Label Location_label;
         private System.Windows.Forms.ComboBox RegioncomboBox1;

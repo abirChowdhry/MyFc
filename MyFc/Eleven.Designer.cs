@@ -35,8 +35,9 @@ namespace MyFc
             this.Exitbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Backbutton = new System.Windows.Forms.Button();
-            this.NamecomboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.RecoverPlayerbutton = new System.Windows.Forms.Button();
+            this.MovePlayerbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Maximisebutton
@@ -47,11 +48,11 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(1054, 4);
+            this.Maximisebutton.Location = new System.Drawing.Point(703, 0);
             this.Maximisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(47, 49);
-            this.Maximisebutton.TabIndex = 69;
+            this.Maximisebutton.TabIndex = 72;
             this.Maximisebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Maximisebutton.UseVisualStyleBackColor = true;
             this.Maximisebutton.Click += new System.EventHandler(this.Maximisebutton_Click);
@@ -64,11 +65,11 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(1000, 4);
+            this.Minimisebutton.Location = new System.Drawing.Point(649, 0);
             this.Minimisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(47, 49);
-            this.Minimisebutton.TabIndex = 70;
+            this.Minimisebutton.TabIndex = 73;
             this.Minimisebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Minimisebutton.UseVisualStyleBackColor = true;
             this.Minimisebutton.Click += new System.EventHandler(this.Minimisebutton_Click);
@@ -82,11 +83,11 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(1107, 4);
+            this.Exitbutton.Location = new System.Drawing.Point(756, 0);
             this.Exitbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(47, 49);
-            this.Exitbutton.TabIndex = 68;
+            this.Exitbutton.TabIndex = 71;
             this.Exitbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Exitbutton.UseVisualStyleBackColor = true;
             this.Exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
@@ -96,63 +97,89 @@ namespace MyFc
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 32);
-            this.label1.TabIndex = 71;
+            this.label1.TabIndex = 74;
             this.label1.Text = "Today\'s Eleven";
             // 
             // Backbutton
             // 
             this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(978, 506);
+            this.Backbutton.Location = new System.Drawing.Point(628, 432);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(160, 36);
-            this.Backbutton.TabIndex = 72;
+            this.Backbutton.TabIndex = 75;
             this.Backbutton.Text = "Back";
             this.Backbutton.UseVisualStyleBackColor = true;
             this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
-            // NamecomboBox
+            // RecoverPlayerbutton
             // 
-            this.NamecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NamecomboBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamecomboBox.FormattingEnabled = true;
-            this.NamecomboBox.Location = new System.Drawing.Point(274, 148);
-            this.NamecomboBox.Name = "NamecomboBox";
-            this.NamecomboBox.Size = new System.Drawing.Size(342, 30);
-            this.NamecomboBox.TabIndex = 73;
+            this.RecoverPlayerbutton.BackColor = System.Drawing.Color.Indigo;
+            this.RecoverPlayerbutton.FlatAppearance.BorderSize = 0;
+            this.RecoverPlayerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecoverPlayerbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecoverPlayerbutton.ForeColor = System.Drawing.Color.White;
+            this.RecoverPlayerbutton.Location = new System.Drawing.Point(201, 285);
+            this.RecoverPlayerbutton.Name = "RecoverPlayerbutton";
+            this.RecoverPlayerbutton.Size = new System.Drawing.Size(431, 78);
+            this.RecoverPlayerbutton.TabIndex = 77;
+            this.RecoverPlayerbutton.Text = "UPDATE PERFORMANCE";
+            this.RecoverPlayerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.RecoverPlayerbutton.UseVisualStyleBackColor = false;
+            this.RecoverPlayerbutton.Click += new System.EventHandler(this.RecoverPlayerbutton_Click);
             // 
-            // label2
+            // MovePlayerbutton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(181, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 23);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Name";
+            this.MovePlayerbutton.BackColor = System.Drawing.Color.Indigo;
+            this.MovePlayerbutton.FlatAppearance.BorderSize = 0;
+            this.MovePlayerbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MovePlayerbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MovePlayerbutton.ForeColor = System.Drawing.Color.White;
+            this.MovePlayerbutton.Location = new System.Drawing.Point(201, 96);
+            this.MovePlayerbutton.Name = "MovePlayerbutton";
+            this.MovePlayerbutton.Size = new System.Drawing.Size(431, 78);
+            this.MovePlayerbutton.TabIndex = 76;
+            this.MovePlayerbutton.Text = "TEAM SELECTION";
+            this.MovePlayerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MovePlayerbutton.UseVisualStyleBackColor = false;
+            this.MovePlayerbutton.Click += new System.EventHandler(this.MovePlayerbutton_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Indigo;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(201, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(431, 78);
+            this.button1.TabIndex = 78;
+            this.button1.Text = "DELETE TEAM";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Eleven
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(1150, 554);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.NamecomboBox);
+            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RecoverPlayerbutton);
+            this.Controls.Add(this.MovePlayerbutton);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Maximisebutton);
             this.Controls.Add(this.Minimisebutton);
             this.Controls.Add(this.Exitbutton);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Eleven";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eleven";
+            this.Text = "Elevencs";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +192,8 @@ namespace MyFc
         private System.Windows.Forms.Button Exitbutton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Backbutton;
-        private System.Windows.Forms.ComboBox NamecomboBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button RecoverPlayerbutton;
+        private System.Windows.Forms.Button MovePlayerbutton;
+        private System.Windows.Forms.Button button1;
     }
 }

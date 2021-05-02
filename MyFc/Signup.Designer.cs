@@ -39,12 +39,13 @@ namespace MyFc
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UserTypecomboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SignupConfirmPasstextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Createbutton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
-            this.UserTypecomboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +114,7 @@ namespace MyFc
             this.SignupPasstextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupPasstextBox.Location = new System.Drawing.Point(213, 111);
             this.SignupPasstextBox.Name = "SignupPasstextBox";
+            this.SignupPasstextBox.PasswordChar = '*';
             this.SignupPasstextBox.Size = new System.Drawing.Size(241, 31);
             this.SignupPasstextBox.TabIndex = 19;
             // 
@@ -165,47 +167,6 @@ namespace MyFc
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create Account";
             // 
-            // SignupConfirmPasstextBox
-            // 
-            this.SignupConfirmPasstextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupConfirmPasstextBox.Location = new System.Drawing.Point(213, 163);
-            this.SignupConfirmPasstextBox.Name = "SignupConfirmPasstextBox";
-            this.SignupConfirmPasstextBox.Size = new System.Drawing.Size(241, 31);
-            this.SignupConfirmPasstextBox.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(34, 163);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 23);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Confirm Password";
-            // 
-            // Createbutton
-            // 
-            this.Createbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Createbutton.Location = new System.Drawing.Point(276, 386);
-            this.Createbutton.Name = "Createbutton";
-            this.Createbutton.Size = new System.Drawing.Size(215, 29);
-            this.Createbutton.TabIndex = 21;
-            this.Createbutton.Text = "CREATE";
-            this.Createbutton.UseVisualStyleBackColor = true;
-            this.Createbutton.Click += new System.EventHandler(this.Createbutton_Click);
-            // 
-            // Backbutton
-            // 
-            this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(604, 432);
-            this.Backbutton.Name = "Backbutton";
-            this.Backbutton.Size = new System.Drawing.Size(160, 36);
-            this.Backbutton.TabIndex = 23;
-            this.Backbutton.Text = "Back";
-            this.Backbutton.UseVisualStyleBackColor = true;
-            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
-            // 
             // UserTypecomboBox
             // 
             this.UserTypecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -230,12 +191,66 @@ namespace MyFc
             this.label5.TabIndex = 42;
             this.label5.Text = "User Type";
             // 
+            // SignupConfirmPasstextBox
+            // 
+            this.SignupConfirmPasstextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupConfirmPasstextBox.Location = new System.Drawing.Point(213, 163);
+            this.SignupConfirmPasstextBox.Name = "SignupConfirmPasstextBox";
+            this.SignupConfirmPasstextBox.PasswordChar = '*';
+            this.SignupConfirmPasstextBox.Size = new System.Drawing.Size(241, 31);
+            this.SignupConfirmPasstextBox.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(34, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 23);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Confirm Password";
+            // 
+            // Createbutton
+            // 
+            this.Createbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Createbutton.Location = new System.Drawing.Point(414, 386);
+            this.Createbutton.Name = "Createbutton";
+            this.Createbutton.Size = new System.Drawing.Size(154, 29);
+            this.Createbutton.TabIndex = 21;
+            this.Createbutton.Text = "CREATE";
+            this.Createbutton.UseVisualStyleBackColor = true;
+            this.Createbutton.Click += new System.EventHandler(this.Createbutton_Click);
+            // 
+            // Backbutton
+            // 
+            this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.Location = new System.Drawing.Point(604, 472);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(160, 36);
+            this.Backbutton.TabIndex = 23;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(197, 386);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 29);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Go To Login ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(776, 480);
+            this.ClientSize = new System.Drawing.Size(776, 520);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.Createbutton);
             this.Controls.Add(this.groupBox1);
@@ -273,5 +288,6 @@ namespace MyFc
         private System.Windows.Forms.Button Backbutton;
         private System.Windows.Forms.ComboBox UserTypecomboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

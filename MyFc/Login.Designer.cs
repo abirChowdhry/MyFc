@@ -42,6 +42,7 @@ namespace MyFc
             this.Loginbutton = new System.Windows.Forms.Button();
             this.Signupbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Backbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(713, 2);
+            this.Maximisebutton.Location = new System.Drawing.Point(737, 2);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(40, 40);
             this.Maximisebutton.TabIndex = 9;
@@ -69,7 +70,7 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(667, 2);
+            this.Minimisebutton.Location = new System.Drawing.Point(691, 2);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(40, 40);
             this.Minimisebutton.TabIndex = 10;
@@ -86,7 +87,7 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(759, 2);
+            this.Exitbutton.Location = new System.Drawing.Point(783, 2);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(40, 40);
             this.Exitbutton.TabIndex = 8;
@@ -140,6 +141,7 @@ namespace MyFc
             this.PasstextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasstextBox.Location = new System.Drawing.Point(254, 105);
             this.PasstextBox.Name = "PasstextBox";
+            this.PasstextBox.PasswordChar = '*';
             this.PasstextBox.Size = new System.Drawing.Size(241, 27);
             this.PasstextBox.TabIndex = 15;
             // 
@@ -195,12 +197,24 @@ namespace MyFc
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
+            // Backbutton
+            // 
+            this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbutton.Location = new System.Drawing.Point(652, 461);
+            this.Backbutton.Name = "Backbutton";
+            this.Backbutton.Size = new System.Drawing.Size(160, 36);
+            this.Backbutton.TabIndex = 24;
+            this.Backbutton.Text = "Back";
+            this.Backbutton.UseVisualStyleBackColor = true;
+            this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(800, 477);
+            this.ClientSize = new System.Drawing.Size(824, 509);
+            this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Maximisebutton);
@@ -232,5 +246,6 @@ namespace MyFc
         private System.Windows.Forms.Button Loginbutton;
         private System.Windows.Forms.Button Signupbutton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Backbutton;
     }
 }

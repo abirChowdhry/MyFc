@@ -75,7 +75,13 @@ namespace MyFc
                         myFc.Show();
                         this.Hide();
                     }
-                    
+                    else if (usertype == "Assistant Manager")
+                    {
+                        MyFc2 myFc2 = new MyFc2();
+                        myFc2.Show();
+                        this.Hide();
+                    }
+
                 }
 
                 else
@@ -83,6 +89,13 @@ namespace MyFc
                     MessageBox.Show("Incorrect Username or Password!", "ERROR");
                 }
             }
+        }
+
+        private void Backbutton_Click(object sender, EventArgs e)
+        {
+            Startup startup = new Startup();
+            startup.Show();
+            this.Hide();
         }
     }
 }

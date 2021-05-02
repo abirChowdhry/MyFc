@@ -89,7 +89,16 @@ namespace MyFc
 
             connection3.Close();
 
-            if (flag == 0 && flag1 == 0 && flag2 == 0 && flag3 == 0)
+            SqlConnection connection4 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+            connection4.Open();
+
+            string sql4 = "delete from ELEVEN where name = '" + NametextBox.Text + "'";
+            SqlCommand command4 = new SqlCommand(sql4, connection4);
+            int flag4 = command4.ExecuteNonQuery();
+
+            connection4.Close();
+
+            if (flag == 0 && flag1 == 0 && flag2 == 0 && flag3 == 0 && flag4 == 0)
             {
                 MessageBox.Show("Player Not Removed!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 

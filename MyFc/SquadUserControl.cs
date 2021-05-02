@@ -46,5 +46,6 @@ namespace MyFc
             ActiveSquad activeSquad = new ActiveSquad();
             activeSquad.Show();
         }
+
     }
 }

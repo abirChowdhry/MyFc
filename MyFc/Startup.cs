@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace MyFc
 {
-    public partial class Eleven : Form
+    public partial class Startup : Form
     {
-        public Eleven()
+        public Startup()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+            signup.Show();
+            this.Hide();
         }
 
         private void Exitbutton_Click(object sender, EventArgs e)
@@ -35,31 +49,6 @@ namespace MyFc
         private void Minimisebutton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Backbutton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void MovePlayerbutton_Click(object sender, EventArgs e)
-        {
-            TeamSelection teamSelection = new TeamSelection();
-            teamSelection.Show();
-            this.Hide();
-        }
-
-        private void RecoverPlayerbutton_Click(object sender, EventArgs e)
-        {
-            UpdatePerformance updatePerformance = new UpdatePerformance();
-            updatePerformance.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DeleteTeam deleteTeam = new DeleteTeam();
-            deleteTeam.Show();
         }
     }
 }

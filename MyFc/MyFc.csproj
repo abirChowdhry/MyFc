@@ -58,17 +58,45 @@
     <Compile Include="AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assist.cs" />
     <Compile Include="CentralUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CentralUserControl.Designer.cs">
       <DependentUpon>CentralUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTeam.Designer.cs">
+      <DependentUpon>DeleteTeam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Eleven.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Eleven.Designer.cs">
       <DependentUpon>Eleven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goal.cs" />
+    <Compile Include="Match.cs" />
+    <Compile Include="MyFc2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFc2.Designer.cs">
+      <DependentUpon>MyFc2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup.Designer.cs">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs" />
+    <Compile Include="TeamSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamSelection.Designer.cs">
+      <DependentUpon>TeamSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="ExceptionCase.cs">
       <SubType>Form</SubType>
@@ -165,6 +193,18 @@
     <Compile Include="SquadUserControl.Designer.cs">
       <DependentUpon>SquadUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopAssist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopAssist.Designer.cs">
+      <DependentUpon>TopAssist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopGoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopGoal.Designer.cs">
+      <DependentUpon>TopGoal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopPlayers.cs" />
     <Compile Include="TopRatedPlayer.cs">
       <SubType>Form</SubType>
@@ -184,6 +224,12 @@
     <Compile Include="UpdateMatch.Designer.cs">
       <DependentUpon>UpdateMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdatePerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePerformance.Designer.cs">
+      <DependentUpon>UpdatePerformance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateSquad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,8 +245,20 @@
     <EmbeddedResource Include="CentralUserControl.resx">
       <DependentUpon>CentralUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTeam.resx">
+      <DependentUpon>DeleteTeam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Eleven.resx">
       <DependentUpon>Eleven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFc2.resx">
+      <DependentUpon>MyFc2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup.resx">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamSelection.resx">
+      <DependentUpon>TeamSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExceptionCase.resx">
       <DependentUpon>ExceptionCase.cs</DependentUpon>
@@ -256,6 +314,12 @@
     <EmbeddedResource Include="SquadUserControl.resx">
       <DependentUpon>SquadUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TopAssist.resx">
+      <DependentUpon>TopAssist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopGoal.resx">
+      <DependentUpon>TopGoal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TopRatedPlayer.resx">
       <DependentUpon>TopRatedPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateMatch.resx">
       <DependentUpon>UpdateMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePerformance.resx">
+      <DependentUpon>UpdatePerformance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateSquad.resx">
       <DependentUpon>UpdateSquad.cs</DependentUpon>

@@ -89,6 +89,9 @@ namespace MyFc
             // 
             this.MatchHistorydataGridView.AllowUserToAddRows = false;
             this.MatchHistorydataGridView.AllowUserToDeleteRows = false;
+            this.MatchHistorydataGridView.AllowUserToResizeColumns = false;
+            this.MatchHistorydataGridView.AllowUserToResizeRows = false;
+            this.MatchHistorydataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.MatchHistorydataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.MatchHistorydataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MatchHistorydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,8 +139,10 @@ namespace MyFc
             this.Controls.Add(this.button1);
             this.Controls.Add(this.UpdateRatingbutton);
             this.Controls.Add(this.MatchSchedulebutton);
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CentralUserControl";
             this.Size = new System.Drawing.Size(1354, 595);
+            this.Load += new System.EventHandler(this.CentralUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MatchHistorydataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

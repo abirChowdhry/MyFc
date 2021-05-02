@@ -36,6 +36,8 @@ namespace MyFc
             this.label1 = new System.Windows.Forms.Label();
             this.Backbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RatingUploaddateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.RatingtextBox = new System.Windows.Forms.TextBox();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.PlayerRatingpictureBox = new System.Windows.Forms.PictureBox();
@@ -45,8 +47,6 @@ namespace MyFc
             this.Searchbutton = new System.Windows.Forms.Button();
             this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RatingUploaddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerRatingpictureBox)).BeginInit();
             this.SuspendLayout();
@@ -143,6 +143,26 @@ namespace MyFc
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Details";
             // 
+            // RatingUploaddateTimePicker
+            // 
+            this.RatingUploaddateTimePicker.Enabled = false;
+            this.RatingUploaddateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RatingUploaddateTimePicker.Location = new System.Drawing.Point(392, 228);
+            this.RatingUploaddateTimePicker.Name = "RatingUploaddateTimePicker";
+            this.RatingUploaddateTimePicker.Size = new System.Drawing.Size(342, 31);
+            this.RatingUploaddateTimePicker.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(258, 233);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 23);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Upload Date";
+            // 
             // RatingtextBox
             // 
             this.RatingtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,27 +256,6 @@ namespace MyFc
             this.label5.Size = new System.Drawing.Size(91, 23);
             this.label5.TabIndex = 81;
             this.label5.Text = "Player ID";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(258, 233);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 23);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Upload Date";
-            this.label4.Visible = false;
-            // 
-            // RatingUploaddateTimePicker
-            // 
-            this.RatingUploaddateTimePicker.Enabled = false;
-            this.RatingUploaddateTimePicker.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RatingUploaddateTimePicker.Location = new System.Drawing.Point(392, 228);
-            this.RatingUploaddateTimePicker.Name = "RatingUploaddateTimePicker";
-            this.RatingUploaddateTimePicker.Size = new System.Drawing.Size(342, 31);
-            this.RatingUploaddateTimePicker.TabIndex = 49;
             // 
             // PlayerRating
             // 

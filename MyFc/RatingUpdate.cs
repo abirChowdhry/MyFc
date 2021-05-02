@@ -151,8 +151,7 @@ namespace MyFc
                 string sql = "Update ratings set prerate = @prerate, updatedate = @updatedate where playerid = '" + PlayerIdtextBox.Text + "'";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                //command.Parameters.AddWithValue("rating", ((Convert.ToSingle(comboBox2.Text) + Convert.ToSingle(comboBox3.Text)) / 2));
-                command.Parameters.AddWithValue("prerate", ((Convert.ToSingle(RatingtextBox.Text) + Convert.ToSingle(UpdateRatingtextBox.Text)) / 2));
+                command.Parameters.AddWithValue("prerate", Math.Round((Convert.ToSingle(RatingtextBox.Text) + Convert.ToSingle(UpdateRatingtextBox.Text)) / 2, 2, MidpointRounding.ToEven).ToString());
                 command.Parameters.AddWithValue("updatedate", RatingUpdatedateTimePicker.Text);
 
                 int flag = command.ExecuteNonQuery();

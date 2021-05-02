@@ -28,5 +28,17 @@ namespace MyFc
             TopRatedPlayer topRatedPlayer = new TopRatedPlayer();
             topRatedPlayer.Show();
         }
+
+        private void TopGoalScorerbutton_Click(object sender, EventArgs e)
+        {
+            TopGoal topGoal = new TopGoal();
+            topGoal.Show();
+        }
+
+        private void TopAssistbutton_Click(object sender, EventArgs e)
+        {
+            TopAssist assist = new TopAssist();
+            assist.Show();
+        }
     }
 }

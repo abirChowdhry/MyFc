@@ -21,8 +21,8 @@ namespace MyFc
 
         private void Backbutton_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            Startup startup = new Startup();
+            startup.Show();
             this.Hide();
         }
 
@@ -74,6 +74,13 @@ namespace MyFc
         private void Exitbutton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }
