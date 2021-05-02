@@ -44,8 +44,8 @@ namespace MyFc
 
         private void AddMatchbutton_Click(object sender, EventArgs e)
         {
-            AddMatch addMatch = new AddMatch();
-            addMatch.Show();
+            MatchCalender matchCalender = new MatchCalender();
+            matchCalender.Show();
             this.Hide();
         }
 
@@ -53,6 +53,20 @@ namespace MyFc
         {
             UpdateMatch updateMatch = new UpdateMatch();
             updateMatch.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DeleteMatch deleteMatch = new DeleteMatch();
+            deleteMatch.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddMatch addMatch = new AddMatch();
+            addMatch.Show();
             this.Hide();
         }
     }

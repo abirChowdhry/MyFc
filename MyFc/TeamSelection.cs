@@ -116,6 +116,15 @@ namespace MyFc
             else if (PP16comboBox.Text == "") { MessageBox.Show("Substitute 5 Position Not Selected","ERROR"); }
             else if (PP1comboBox.Text != "Goalkeeper" && PP2comboBox.Text != "Goalkeeper" && PP3comboBox.Text != "Goalkeeper" && PP4comboBox.Text != "Goalkeeper" && PP5comboBox.Text != "Goalkeeper" && PP6comboBox.Text != "Goalkeeper" && PP7comboBox.Text != "Goalkeeper" && PP8comboBox.Text != "Goalkeeper" && PP9comboBox.Text != "Goalkeeper" && PP10comboBox.Text != "Goalkeeper" && PP11comboBox.Text != "Goalkeeper") { MessageBox.Show("One Goalkeeper Must Be Selected In The Main Team!", "ERROR"); }
             else if (MatchDatedateTimePicker.Checked == false) { MessageBox.Show("Match Date Must Be Given", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+            SqlConnection connection16 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+            connection16.Open();
+
+            string sql16 = "Select matchdate from matches where matchdate = '" + MatchDatedateTimePicker.Text + "'";
+            SqlCommand command16 = new SqlCommand(sql16, connection16);
+            SqlDataReader reader = command16.ExecuteReader();
+            if (!reader.Read()){ MessageBox.Show("No Match Scheduled On The Given Match Date","ERROR"); }
+
             else
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
@@ -181,7 +190,7 @@ namespace MyFc
                 SqlCommand command14 = new SqlCommand(sql14, connection);
                 int flag14 = command14.ExecuteNonQuery();
 
-                string sql15 = "Insert into Eleven(name,position,matchdate) values('" + Player16comboBox.Text + "','" + PP16comboBox.Text + "', '"+MatchDatedateTimePicker.Text+"') ";
+                string sql15 = "Insert into Eleven(name,position,matchdate) values('" + Player16comboBox.Text + "','" + PP16comboBox.Text + "', '" + MatchDatedateTimePicker.Text + "') ";
                 SqlCommand command15 = new SqlCommand(sql15, connection);
                 int flag15 = command15.ExecuteNonQuery();
 

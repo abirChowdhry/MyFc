@@ -37,6 +37,8 @@ namespace MyFc
             this.AddMatchbutton = new System.Windows.Forms.Button();
             this.UpdateMatchbutton = new System.Windows.Forms.Button();
             this.Backbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Maximisebutton
@@ -47,7 +49,7 @@ namespace MyFc
             this.Maximisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Maximisebutton.ForeColor = System.Drawing.Color.White;
             this.Maximisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Maximisebutton.Image")));
-            this.Maximisebutton.Location = new System.Drawing.Point(700, 3);
+            this.Maximisebutton.Location = new System.Drawing.Point(712, 3);
             this.Maximisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Maximisebutton.Name = "Maximisebutton";
             this.Maximisebutton.Size = new System.Drawing.Size(47, 49);
@@ -64,7 +66,7 @@ namespace MyFc
             this.Minimisebutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimisebutton.ForeColor = System.Drawing.Color.White;
             this.Minimisebutton.Image = ((System.Drawing.Image)(resources.GetObject("Minimisebutton.Image")));
-            this.Minimisebutton.Location = new System.Drawing.Point(646, 3);
+            this.Minimisebutton.Location = new System.Drawing.Point(658, 3);
             this.Minimisebutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Minimisebutton.Name = "Minimisebutton";
             this.Minimisebutton.Size = new System.Drawing.Size(47, 49);
@@ -82,7 +84,7 @@ namespace MyFc
             this.Exitbutton.ForeColor = System.Drawing.Color.White;
             this.Exitbutton.Image = ((System.Drawing.Image)(resources.GetObject("Exitbutton.Image")));
             this.Exitbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exitbutton.Location = new System.Drawing.Point(753, 3);
+            this.Exitbutton.Location = new System.Drawing.Point(765, 3);
             this.Exitbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Exitbutton.Name = "Exitbutton";
             this.Exitbutton.Size = new System.Drawing.Size(47, 49);
@@ -109,11 +111,11 @@ namespace MyFc
             this.AddMatchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMatchbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddMatchbutton.ForeColor = System.Drawing.Color.White;
-            this.AddMatchbutton.Location = new System.Drawing.Point(175, 134);
+            this.AddMatchbutton.Location = new System.Drawing.Point(175, 201);
             this.AddMatchbutton.Name = "AddMatchbutton";
             this.AddMatchbutton.Size = new System.Drawing.Size(431, 78);
             this.AddMatchbutton.TabIndex = 33;
-            this.AddMatchbutton.Text = "SCHEDULE A MATCH";
+            this.AddMatchbutton.Text = "MATCH CALENDER";
             this.AddMatchbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.AddMatchbutton.UseVisualStyleBackColor = false;
             this.AddMatchbutton.Click += new System.EventHandler(this.AddMatchbutton_Click);
@@ -125,7 +127,7 @@ namespace MyFc
             this.UpdateMatchbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateMatchbutton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateMatchbutton.ForeColor = System.Drawing.Color.White;
-            this.UpdateMatchbutton.Location = new System.Drawing.Point(175, 230);
+            this.UpdateMatchbutton.Location = new System.Drawing.Point(175, 294);
             this.UpdateMatchbutton.Name = "UpdateMatchbutton";
             this.UpdateMatchbutton.Size = new System.Drawing.Size(431, 78);
             this.UpdateMatchbutton.TabIndex = 34;
@@ -137,7 +139,7 @@ namespace MyFc
             // Backbutton
             // 
             this.Backbutton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Backbutton.Location = new System.Drawing.Point(628, 402);
+            this.Backbutton.Location = new System.Drawing.Point(640, 495);
             this.Backbutton.Name = "Backbutton";
             this.Backbutton.Size = new System.Drawing.Size(160, 36);
             this.Backbutton.TabIndex = 56;
@@ -145,12 +147,46 @@ namespace MyFc
             this.Backbutton.UseVisualStyleBackColor = true;
             this.Backbutton.Click += new System.EventHandler(this.Backbutton_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Indigo;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(175, 387);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(431, 78);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "DELETE SCHEDULED MATCH";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Indigo;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(175, 108);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(431, 78);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "SCHEDULE A MATCH";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MatchSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(17)))), ((int)(((byte)(89)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(812, 543);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Backbutton);
             this.Controls.Add(this.UpdateMatchbutton);
             this.Controls.Add(this.AddMatchbutton);
@@ -176,5 +212,7 @@ namespace MyFc
         private System.Windows.Forms.Button AddMatchbutton;
         private System.Windows.Forms.Button UpdateMatchbutton;
         private System.Windows.Forms.Button Backbutton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

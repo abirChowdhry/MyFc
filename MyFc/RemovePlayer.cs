@@ -105,7 +105,7 @@ namespace MyFc
             }
             else
             {
-                MessageBox.Show("Player Removed", "SUCCESSFUL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Player Removed", "SUCCESSFUL");
                 this.Hide();
             }
         }
