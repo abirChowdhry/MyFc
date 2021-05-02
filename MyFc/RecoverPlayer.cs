@@ -76,29 +76,33 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-            string sql = "SELECT * FROM injuries where name = '" + NametextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            List<Injured> players = new List<Injured>();
-
-            while (reader.Read())
+            if (NametextBox.Text == "") { MessageBox.Show("Player Name Must Be Given to Search", "ERROR"); }
+            else
             {
-                Injured players1 = new Injured();
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
+                string sql = "SELECT * FROM injuries where name = '" + NametextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
 
-                players1.Name = reader["name"].ToString();
-                players1.Image = (byte[])reader["photo"];
-                players1.Position = reader["position"].ToString();
-                players1.Id = Convert.ToInt32(reader["playerId"]);
+                List<Injured> players = new List<Injured>();
 
-                players.Add(players1);
+                while (reader.Read())
+                {
+                    Injured players1 = new Injured();
+
+                    players1.Name = reader["name"].ToString();
+                    players1.Image = (byte[])reader["photo"];
+                    players1.Position = reader["position"].ToString();
+                    players1.Id = Convert.ToInt32(reader["playerId"]);
+
+                    players.Add(players1);
+                }
+
+                SquaddataGridView.DataSource = players;
+
+                connection.Close();
             }
-
-            SquaddataGridView.DataSource = players;
-
-            connection.Close();
         }
 
         private void SquaddataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

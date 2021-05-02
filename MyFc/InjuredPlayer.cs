@@ -49,46 +49,50 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-
-            string sql = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (!reader.Read()) { MessageBox.Show("Player is Already Under Exception Player List!! You Can Only Recover Him", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information); connection.Close(); }
-
+            if (PlayerIdtextBox.Text == "") { MessageBox.Show("Player Id Must Be Given to Search","ERROR"); }
             else
             {
-                SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-                connection1.Open();
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
 
-                string sql1 = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
-                SqlCommand command1 = new SqlCommand(sql1, connection1);
-                SqlDataReader reader1 = command1.ExecuteReader();
+                string sql = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
 
-                if (reader1.Read())
-                {
-                    NametextBox.Text = reader1["name"].ToString();
-                    DateOfBirthdateTimePicker.Text = reader1["dateOfBirth"].ToString();
-                    InjuryPlayerpictureBox.Image = GetPhoto((byte[])reader1["photo"]);
-                    HeighttextBox.Text = reader1["height"].ToString();
-                    PreferredFootcomboBox.Text = reader1["foot"].ToString();
-                    WagetextBox.Text = reader1["wage"].ToString();
-                    CurrencycomboBox1.Text = reader1["wageCurrency"].ToString();
-                    PricetextBox.Text = reader1["price"].ToString();
-                    CurrencycomboBox2.Text = reader1["priceCurrency"].ToString();
-                    PositioncomboBox.Text = reader1["position"].ToString();
-
-                }
+                if (!reader.Read()) { MessageBox.Show("Player is Already Under Exception Player List!! You Can Only Recover Him", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information); connection.Close(); }
 
                 else
                 {
-                    NametextBox.Text = PositioncomboBox.Text = "";
-                    MessageBox.Show("Player Not Found!", "ERROR");
-                }
+                    SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                    connection1.Open();
 
-                connection1.Close();
+                    string sql1 = "Select * from active where playerId = '" + PlayerIdtextBox.Text + "'";
+                    SqlCommand command1 = new SqlCommand(sql1, connection1);
+                    SqlDataReader reader1 = command1.ExecuteReader();
+
+                    if (reader1.Read())
+                    {
+                        NametextBox.Text = reader1["name"].ToString();
+                        DateOfBirthdateTimePicker.Text = reader1["dateOfBirth"].ToString();
+                        InjuryPlayerpictureBox.Image = GetPhoto((byte[])reader1["photo"]);
+                        HeighttextBox.Text = reader1["height"].ToString();
+                        PreferredFootcomboBox.Text = reader1["foot"].ToString();
+                        WagetextBox.Text = reader1["wage"].ToString();
+                        CurrencycomboBox1.Text = reader1["wageCurrency"].ToString();
+                        PricetextBox.Text = reader1["price"].ToString();
+                        CurrencycomboBox2.Text = reader1["priceCurrency"].ToString();
+                        PositioncomboBox.Text = reader1["position"].ToString();
+
+                    }
+
+                    else
+                    {
+                        NametextBox.Text = PositioncomboBox.Text = "";
+                        MessageBox.Show("Player Not Found!", "ERROR");
+                    }
+
+                    connection1.Close();
+                }
             }
         }
 

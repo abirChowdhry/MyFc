@@ -80,36 +80,40 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-            string sql = "SELECT * FROM active where name = '" + NametextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            List<Players> players = new List<Players>();
-
-            while (reader.Read())
+            if (NametextBox.Text == "") { MessageBox.Show("Player Name Must Be Given to Search"); }
+            else
             {
-                Players players1 = new Players();
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
+                string sql = "SELECT * FROM active where name = '" + NametextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
 
-                players1.Name = reader["name"].ToString();
-                players1.Dob = reader["dateofBirth"].ToString();
-                players1.Image = (byte[])reader["photo"];
-                players1.Height = reader["height"].ToString();
-                players1.Foot = reader["foot"].ToString();
-                players1.Wage = Convert.ToDouble(reader["wage"]);
-                players1.WageCurrency = reader["wageCurrency"].ToString();
-                players1.Price = Convert.ToDouble(reader["price"]);
-                players1.PriceCurrency = reader["priceCurrency"].ToString();
-                players1.Position = reader["position"].ToString();
-                players1.Id = Convert.ToInt32(reader["playerId"]);
+                List<Players> players = new List<Players>();
 
-                players.Add(players1);
+                while (reader.Read())
+                {
+                    Players players1 = new Players();
+
+                    players1.Name = reader["name"].ToString();
+                    players1.Dob = reader["dateofBirth"].ToString();
+                    players1.Image = (byte[])reader["photo"];
+                    players1.Height = reader["height"].ToString();
+                    players1.Foot = reader["foot"].ToString();
+                    players1.Wage = Convert.ToDouble(reader["wage"]);
+                    players1.WageCurrency = reader["wageCurrency"].ToString();
+                    players1.Price = Convert.ToDouble(reader["price"]);
+                    players1.PriceCurrency = reader["priceCurrency"].ToString();
+                    players1.Position = reader["position"].ToString();
+                    players1.Id = Convert.ToInt32(reader["playerId"]);
+
+                    players.Add(players1);
+                }
+
+                SquaddataGridView.DataSource = players;
+
+                connection.Close();
             }
-
-            SquaddataGridView.DataSource = players;
-
-            connection.Close();
         }
 
         private void SquaddataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

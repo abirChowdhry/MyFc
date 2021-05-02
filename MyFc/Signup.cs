@@ -32,7 +32,7 @@ namespace MyFc
             else if (SignupPasstextBox.Text == "") { MessageBox.Show("Password Can't Be Empty!", "ERROR"); }
             else if (SignupConfirmPasstextBox.Text == "") { MessageBox.Show("Confirm Password Can't Be Empty!", "ERROR"); }
             else if (UserTypecomboBox.Text == "") { MessageBox.Show("User Type Must Be Selected!", "ERROR"); }
-            else if (SignupConfirmPasstextBox.Text != SignupPasstextBox.Text) { MessageBox.Show("Password & Confirm Password Can't Be Empty!", "ERROR"); }
+            else if (SignupConfirmPasstextBox.Text != SignupPasstextBox.Text) { MessageBox.Show("Password & Confirm Password Have to Be Same!", "ERROR"); }
             else  
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
@@ -43,16 +43,18 @@ namespace MyFc
                 if (flag == 1)
                 {
                     connection.Close();
-                    MessageBox.Show("Account Created", "Successful");
+                    MessageBox.Show("Account Created", "SUCCESSFUL");
+                    Login login = new Login();
+                    login.Show();
+                    this.Hide();
                 }
                 else if (flag == 0)
                 {
                     connection.Close();
-                    MessageBox.Show("Account Can't Be Created!", "Error");
+                    MessageBox.Show("Account Not Created!", "ERROR", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-                Login login = new Login();
-                login.Show();
-                this.Hide();
+
+                connection.Close();
             }
         }
 

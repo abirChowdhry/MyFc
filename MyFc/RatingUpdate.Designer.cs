@@ -36,6 +36,8 @@ namespace MyFc
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.RatingUpdatedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.UpdateRatingtextBox = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@ namespace MyFc
             this.Backbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Addbutton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPlayerpictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -159,6 +159,27 @@ namespace MyFc
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player Details";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(456, 251);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(342, 31);
+            this.dateTimePicker1.TabIndex = 67;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(293, 256);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 23);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "Last Updated";
             // 
             // RatingUpdatedateTimePicker
             // 
@@ -293,6 +314,7 @@ namespace MyFc
             this.SquaddataGridView.AllowUserToResizeRows = false;
             this.SquaddataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.SquaddataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SquaddataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SquaddataGridView.GridColor = System.Drawing.Color.White;
             this.SquaddataGridView.Location = new System.Drawing.Point(6, 25);
             this.SquaddataGridView.Name = "SquaddataGridView";
@@ -354,27 +376,6 @@ namespace MyFc
             this.Addbutton.Text = "UPDATE";
             this.Addbutton.UseVisualStyleBackColor = true;
             this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(456, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(342, 31);
-            this.dateTimePicker1.TabIndex = 67;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(293, 256);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 23);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "Last Updated";
             // 
             // RatingUpdate
             // 

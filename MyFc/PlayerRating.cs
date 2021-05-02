@@ -47,37 +47,41 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-
-            string sql = "Select * from ratings where playerId = '" + PlayerIdtextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read()) { MessageBox.Show("Player is Already in the Rating List!! You Can Only Update His Rating","Info",MessageBoxButtons.OK,MessageBoxIcon.Information); connection.Close(); }
-
+            if (PlayerIdtextBox.Text == "") { MessageBox.Show("Player Id Must Be Given to Search"); }
             else
             {
-                SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-                connection1.Open();
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
 
-                string sql1 = "Select * from PLAYERS where playerId = '" + PlayerIdtextBox.Text + "'";
-                SqlCommand command1 = new SqlCommand(sql1, connection1);
-                SqlDataReader reader1 = command1.ExecuteReader();
+                string sql = "Select * from ratings where playerId = '" + PlayerIdtextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
 
-                if (reader1.Read())
-                {
-                    NametextBox.Text = reader1["name"].ToString();
-                    PlayerRatingpictureBox.Image = GetPhoto((byte[])reader1["photo"]);
-                }
+                if (reader.Read()) { MessageBox.Show("Player is Already in the Rating List!! You Can Only Update His Rating", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information); connection.Close(); }
 
                 else
                 {
-                    NametextBox.Text = "";
-                    MessageBox.Show("Player Not Found!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                    connection1.Open();
 
-                connection.Close();
+                    string sql1 = "Select * from PLAYERS where playerId = '" + PlayerIdtextBox.Text + "'";
+                    SqlCommand command1 = new SqlCommand(sql1, connection1);
+                    SqlDataReader reader1 = command1.ExecuteReader();
+
+                    if (reader1.Read())
+                    {
+                        NametextBox.Text = reader1["name"].ToString();
+                        PlayerRatingpictureBox.Image = GetPhoto((byte[])reader1["photo"]);
+                    }
+
+                    else
+                    {
+                        NametextBox.Text = "";
+                        MessageBox.Show("Player Not Found!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    connection.Close();
+                }
             }
         }
         private Image GetPhoto(byte[] value)

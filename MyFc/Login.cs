@@ -86,7 +86,7 @@ namespace MyFc
 
                 else
                 {
-                    MessageBox.Show("Incorrect Username or Password!", "ERROR");
+                    MessageBox.Show("Incorrect Username or Password!", "ERROR", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }

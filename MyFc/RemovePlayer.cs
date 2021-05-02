@@ -112,35 +112,38 @@ namespace MyFc
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-
-            string sql = "Select * from PLAYERS where playerId = '" + PlayerIdtextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
-            {
-                NametextBox.Text = reader["name"].ToString();
-                DateOfBirthdateTimePicker.Text = reader["dateOfBirth"].ToString();
-                RemovePlayerpictureBox.Image = GetPhoto((byte[])reader["photo"]);
-                HeighttextBox.Text = reader["height"].ToString();
-                PreferredFootcomboBox.Text = reader["foot"].ToString();
-                WagetextBox.Text = reader["wage"].ToString();
-                CurrencycomboBox1.Text = reader["wageCurrency"].ToString();
-                PricetextBox.Text = reader["price"].ToString();
-                CurrencycomboBox2.Text = reader["priceCurrency"].ToString();
-                PositioncomboBox.Text = reader["position"].ToString();
-            }
-
+            if (PlayerIdtextBox.Text == "") { MessageBox.Show("Player Id Must Be Given to Search", "ERROR"); }
             else
             {
-                NametextBox.Text = DateOfBirthdateTimePicker.Text = HeighttextBox.Text = PreferredFootcomboBox.Text = WagetextBox.Text = CurrencycomboBox1.Text = PricetextBox.Text = CurrencycomboBox2.Text = PositioncomboBox.Text = "";
-                MessageBox.Show("Player Not Found!", "ERROR");
-            }
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
 
-            connection.Close();
+                string sql = "Select * from PLAYERS where playerId = '" + PlayerIdtextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    NametextBox.Text = reader["name"].ToString();
+                    DateOfBirthdateTimePicker.Text = reader["dateOfBirth"].ToString();
+                    RemovePlayerpictureBox.Image = GetPhoto((byte[])reader["photo"]);
+                    HeighttextBox.Text = reader["height"].ToString();
+                    PreferredFootcomboBox.Text = reader["foot"].ToString();
+                    WagetextBox.Text = reader["wage"].ToString();
+                    CurrencycomboBox1.Text = reader["wageCurrency"].ToString();
+                    PricetextBox.Text = reader["price"].ToString();
+                    CurrencycomboBox2.Text = reader["priceCurrency"].ToString();
+                    PositioncomboBox.Text = reader["position"].ToString();
+                }
+
+                else
+                {
+                    NametextBox.Text = DateOfBirthdateTimePicker.Text = HeighttextBox.Text = PreferredFootcomboBox.Text = WagetextBox.Text = CurrencycomboBox1.Text = PricetextBox.Text = CurrencycomboBox2.Text = PositioncomboBox.Text = "";
+                    MessageBox.Show("Player Not Found!", "ERROR");
+                }
+
+                connection.Close();
+            }
         }
     }
 }

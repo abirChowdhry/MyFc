@@ -125,6 +125,7 @@ namespace MyFc
             this.SquaddataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SquaddataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.SquaddataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SquaddataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SquaddataGridView.GridColor = System.Drawing.Color.White;
             this.SquaddataGridView.Location = new System.Drawing.Point(6, 25);
             this.SquaddataGridView.Name = "SquaddataGridView";

@@ -38,6 +38,8 @@ namespace MyFc
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.EventcomboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.PositioncomboBox = new System.Windows.Forms.ComboBox();
@@ -51,6 +53,7 @@ namespace MyFc
             this.Exitbutton = new System.Windows.Forms.Button();
             this.Injuredbutton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.NewIDtextBox = new System.Windows.Forms.TextBox();
             this.CurrencycomboBox2 = new System.Windows.Forms.ComboBox();
             this.HeighttextBox = new System.Windows.Forms.TextBox();
             this.DateOfBirthdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -58,9 +61,6 @@ namespace MyFc
             this.PricetextBox = new System.Windows.Forms.TextBox();
             this.PreferredFootcomboBox = new System.Windows.Forms.ComboBox();
             this.WagetextBox = new System.Windows.Forms.TextBox();
-            this.PlayerIdtextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.NewIDtextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SquaddataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -111,6 +111,7 @@ namespace MyFc
             this.SquaddataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SquaddataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.SquaddataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SquaddataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SquaddataGridView.GridColor = System.Drawing.Color.White;
             this.SquaddataGridView.Location = new System.Drawing.Point(6, 25);
             this.SquaddataGridView.Name = "SquaddataGridView";
@@ -170,6 +171,26 @@ namespace MyFc
             this.groupBox2.TabIndex = 64;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player Details";
+            // 
+            // PlayerIdtextBox
+            // 
+            this.PlayerIdtextBox.Enabled = false;
+            this.PlayerIdtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerIdtextBox.Location = new System.Drawing.Point(123, 255);
+            this.PlayerIdtextBox.Name = "PlayerIdtextBox";
+            this.PlayerIdtextBox.Size = new System.Drawing.Size(160, 31);
+            this.PlayerIdtextBox.TabIndex = 59;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 23);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Player ID";
             // 
             // EventcomboBox
             // 
@@ -344,6 +365,14 @@ namespace MyFc
             this.groupBox3.Text = "Other Details";
             this.groupBox3.Visible = false;
             // 
+            // NewIDtextBox
+            // 
+            this.NewIDtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewIDtextBox.Location = new System.Drawing.Point(402, 56);
+            this.NewIDtextBox.Name = "NewIDtextBox";
+            this.NewIDtextBox.Size = new System.Drawing.Size(87, 31);
+            this.NewIDtextBox.TabIndex = 73;
+            // 
             // CurrencycomboBox2
             // 
             this.CurrencycomboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -414,34 +443,6 @@ namespace MyFc
             this.WagetextBox.Name = "WagetextBox";
             this.WagetextBox.Size = new System.Drawing.Size(121, 31);
             this.WagetextBox.TabIndex = 39;
-            // 
-            // PlayerIdtextBox
-            // 
-            this.PlayerIdtextBox.Enabled = false;
-            this.PlayerIdtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerIdtextBox.Location = new System.Drawing.Point(123, 255);
-            this.PlayerIdtextBox.Name = "PlayerIdtextBox";
-            this.PlayerIdtextBox.Size = new System.Drawing.Size(160, 31);
-            this.PlayerIdtextBox.TabIndex = 59;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(26, 257);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 23);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "Player ID";
-            // 
-            // NewIDtextBox
-            // 
-            this.NewIDtextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewIDtextBox.Location = new System.Drawing.Point(402, 56);
-            this.NewIDtextBox.Name = "NewIDtextBox";
-            this.NewIDtextBox.Size = new System.Drawing.Size(87, 31);
-            this.NewIDtextBox.TabIndex = 73;
             // 
             // RecoverPlayer
             // 

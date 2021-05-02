@@ -67,7 +67,7 @@ namespace MyFc
             this.TopGoalScorerbutton.Name = "TopGoalScorerbutton";
             this.TopGoalScorerbutton.Size = new System.Drawing.Size(317, 177);
             this.TopGoalScorerbutton.TabIndex = 3;
-            this.TopGoalScorerbutton.Text = "TOP GOAL SCORER";
+            this.TopGoalScorerbutton.Text = "TOP GOALS";
             this.TopGoalScorerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.TopGoalScorerbutton.UseVisualStyleBackColor = false;
             this.TopGoalScorerbutton.Click += new System.EventHandler(this.TopGoalScorerbutton_Click);

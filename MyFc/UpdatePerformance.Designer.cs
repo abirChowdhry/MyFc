@@ -42,14 +42,14 @@ namespace MyFc
             this.SquaddataGridView = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.AssisttextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.GoaltextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.PositioncomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.PlayerNametextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.GoaltextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AssisttextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Addbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SquaddataGridView)).BeginInit();
@@ -184,6 +184,7 @@ namespace MyFc
             this.SquaddataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SquaddataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.SquaddataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SquaddataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SquaddataGridView.GridColor = System.Drawing.Color.White;
             this.SquaddataGridView.Location = new System.Drawing.Point(6, 25);
             this.SquaddataGridView.Name = "SquaddataGridView";
@@ -221,6 +222,46 @@ namespace MyFc
             this.groupBox2.TabIndex = 82;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player Details";
+            // 
+            // AssisttextBox
+            // 
+            this.AssisttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssisttextBox.Location = new System.Drawing.Point(176, 285);
+            this.AssisttextBox.Name = "AssisttextBox";
+            this.AssisttextBox.Size = new System.Drawing.Size(281, 31);
+            this.AssisttextBox.TabIndex = 61;
+            this.AssisttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AssisttextBox_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(90, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 23);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Assist";
+            // 
+            // GoaltextBox
+            // 
+            this.GoaltextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoaltextBox.Location = new System.Drawing.Point(176, 221);
+            this.GoaltextBox.Name = "GoaltextBox";
+            this.GoaltextBox.Size = new System.Drawing.Size(281, 31);
+            this.GoaltextBox.TabIndex = 59;
+            this.GoaltextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GoaltextBox_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(90, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 23);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Goal";
             // 
             // PositioncomboBox
             // 
@@ -269,46 +310,6 @@ namespace MyFc
             this.label9.Size = new System.Drawing.Size(67, 23);
             this.label9.TabIndex = 42;
             this.label9.Text = "Name";
-            // 
-            // GoaltextBox
-            // 
-            this.GoaltextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoaltextBox.Location = new System.Drawing.Point(176, 221);
-            this.GoaltextBox.Name = "GoaltextBox";
-            this.GoaltextBox.Size = new System.Drawing.Size(281, 31);
-            this.GoaltextBox.TabIndex = 59;
-            this.GoaltextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GoaltextBox_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(90, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 23);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Goal";
-            // 
-            // AssisttextBox
-            // 
-            this.AssisttextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssisttextBox.Location = new System.Drawing.Point(176, 285);
-            this.AssisttextBox.Name = "AssisttextBox";
-            this.AssisttextBox.Size = new System.Drawing.Size(281, 31);
-            this.AssisttextBox.TabIndex = 61;
-            this.AssisttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AssisttextBox_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(90, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 23);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Assist";
             // 
             // Addbutton
             // 

@@ -95,6 +95,7 @@ namespace MyFc
             this.MatchHistorydataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.MatchHistorydataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MatchHistorydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MatchHistorydataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchHistorydataGridView.GridColor = System.Drawing.Color.White;
             this.MatchHistorydataGridView.Location = new System.Drawing.Point(50, 227);
             this.MatchHistorydataGridView.Name = "MatchHistorydataGridView";

@@ -99,31 +99,35 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
-            connection.Open();
-            string sql = "SELECT * FROM ratings where name = '" + NametextBox.Text + "'";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataReader reader = command.ExecuteReader();
-
-
-            List<Rating> players = new List<Rating>();
-
-            while (reader.Read())
+            if (NametextBox.Text == "") { MessageBox.Show("Player Name Must Be Given to Search", "ERROR"); }
+            else
             {
-                Rating players1 = new Rating();
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
+                connection.Open();
+                string sql = "SELECT * FROM ratings where name = '" + NametextBox.Text + "'";
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
 
-                players1.Name = reader["name"].ToString();
-                players1.Image = (byte[])reader["photo"];
-                players1.Rate = Convert.ToSingle(reader["prerate"]);
-                players1.UploadDate = reader["uploaddate"].ToString();
-                players1.LastModified = reader["updatedate"].ToString();
-                players1.Id = Convert.ToInt32(reader["playerId"]);
 
-                players.Add(players1);
+                List<Rating> players = new List<Rating>();
+
+                while (reader.Read())
+                {
+                    Rating players1 = new Rating();
+
+                    players1.Name = reader["name"].ToString();
+                    players1.Image = (byte[])reader["photo"];
+                    players1.Rate = Convert.ToSingle(reader["prerate"]);
+                    players1.UploadDate = reader["uploaddate"].ToString();
+                    players1.LastModified = reader["updatedate"].ToString();
+                    players1.Id = Convert.ToInt32(reader["playerId"]);
+
+                    players.Add(players1);
+                }
+
+                SquaddataGridView.DataSource = players;
+                connection.Close();
             }
-
-            SquaddataGridView.DataSource = players;
-            connection.Close();
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)

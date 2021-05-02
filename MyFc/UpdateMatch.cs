@@ -106,7 +106,7 @@ namespace MyFc
 
         private void Searchbutton_Click_1(object sender, EventArgs e)
         {
-            if (MatchdateTimePicker.Checked == false) { MessageBox.Show("Select a Match Date to Search"); }
+            if (MatchdateTimePicker.Checked == false) { MessageBox.Show("Select a Match Date to Search","ERROR"); }
             else
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);

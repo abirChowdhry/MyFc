@@ -161,6 +161,7 @@ namespace MyFc
             this.MatchdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.MatchdataGridView.BackgroundColor = System.Drawing.Color.Indigo;
             this.MatchdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MatchdataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchdataGridView.GridColor = System.Drawing.Color.White;
             this.MatchdataGridView.Location = new System.Drawing.Point(6, 25);
             this.MatchdataGridView.Name = "MatchdataGridView";

@@ -48,7 +48,7 @@ namespace MyFc
 
         private void Searchbutton_Click(object sender, EventArgs e)
         {
-            if (MatchDatedateTimePicker.Checked == false) { MessageBox.Show("Match Date Must Be Given To See The Team", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (MatchDatedateTimePicker.Checked == false) { MessageBox.Show("Match Date Must Be Given To See The Team", "ERROR"); }
             else
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString);
